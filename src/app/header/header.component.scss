@@ -1,0 +1,262 @@
+@use 'src/assets/utilities/_variables.scss';
+
+.darkBg {
+    background-color: #000;
+    color: #fff;
+}
+
+.whiteBg {
+    background-color: #fff;
+    color: #000;
+}
+
+.darkText {
+    color: #fff;
+}
+
+.whiteText {
+    color: #000;
+}
+
+.darkIcon {
+    filter: invert(0%);
+}
+
+.whiteIcon {
+    filter: invert(100%);
+}
+
+.link-items {
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: 600;
+    font-size: 16px;
+    position: relative;
+}
+
+.sticky-wrapper img:hover {
+    transition: transform 0.2s;
+    cursor: pointer;
+}
+
+.nav-link {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+}
+
+.logo-icon {
+    height: auto;
+    filter: invert(0%);
+}
+
+.white-svg {
+    fill: #ffffff;
+}
+
+ul li a.nav-link::after {
+    content: '';
+    width: 0px;
+    height: 0px;
+    outline: solid;
+    outline-width: 0px;
+    border-color: #000;
+    border-radius: 2px;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.2s;
+}
+
+ul li a.nav-link:hover::after {
+    bottom: -10px;
+    width: 32px;
+    height: 12px;
+    outline-width: 2px;
+}
+
+button.navbar-toggler {
+    border: none !important;
+}
+
+button.navbar-toggler:focus {
+    box-shadow: none !important;
+}
+
+.overlay {
+    height: 0%;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0);
+    overflow-y: hidden;
+    transition: 0.5s;
+}
+
+.overlay-content {
+    position: relative;
+    top: 20%;
+    width: 100%;
+    text-align: center;
+}
+
+.overlay-content a {
+    text-decoration: none;
+    margin: 40px 15px;
+    color: variables.$second-color;
+    font-weight: 600;
+    font-size: 54px;
+    line-height: 64px;
+    display: block;
+    transition: 0.3s;
+}
+
+.overlay-content hr {
+    border-top: 2px dashed #F7F084;
+    opacity: .9;
+    margin: 40px;
+}
+
+.overlay .closebtn {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+}
+
+.hire-button {
+    width: auto;
+}
+
+.sticky-wrapper {
+    position: fixed;
+    top: 32px;
+    right: 108px;
+    z-index: 9999;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.sticky-wrapper img:hover {
+    transition: transform 0.2s;
+    cursor: pointer;
+}
+
+@media screen and (max-height: 450px) {
+    .overlay {
+        overflow-y: auto;
+    }
+
+    .overlay a {
+        font-size: 20px
+    }
+
+    .overlay .closebtn {
+        top: 35px;
+        right: 35px;
+    }
+}
+
+
+@media (max-width: 2560px) {
+
+    .sticky-wrapper {
+        top: 32px;
+        right: 108px;
+    }
+
+    .hire-button {
+        width: auto;
+    }
+}
+
+@media (max-width: 1440px) {
+    .sticky-wrapper {
+        top: 32px;
+        right: 108px;
+    }
+
+    .hire-button {
+        width: auto;
+    }
+}
+
+@media (max-width: 1200px) {
+    .sticky-wrapper {
+        top: 32px;
+        right: 108px;
+    }
+
+    .hire-button {
+        width: auto;
+    }
+}
+
+@media (max-width: 1024px) {
+    .sticky-wrapper {
+        top: 32px;
+        right: 68px;
+    }
+
+    .hire-button {
+        width: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .sticky-wrapper {
+        top: 32px;
+        right: 38px;
+    }
+
+    .hire-button {
+        width: 80%;
+    }
+}
+
+@media (max-width: 576px) {
+    .sticky-wrapper {
+        top: 32px;
+        right: 30px;
+    }
+}
+
+@media (max-width: 430px) {
+    .sticky-wrapper {
+        top: 32px;
+        right: 0px;
+    }
+
+    .hire-button {
+        width: 72%;
+    }
+
+    .overlay-content a {
+        margin: 40px 18px;
+    }
+}
+
+@media (max-width: 362px) {
+    .sticky-wrapper {
+        top: 30px;
+        right: -10px;
+    }
+
+    .hire-button {
+        width: 64%;
+    }
+
+    .overlay-content a {
+        margin: 40px 15px;
+    }
+}
+
+@media (max-width: 325px) {
+    .sticky-wrapper {
+        top: 30px;
+        right: 5px;
+    }
+
+    .hire-button {
+        width: 64%;
+    }
+}

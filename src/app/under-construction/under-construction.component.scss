@@ -1,0 +1,115 @@
+@use 'src/assets/utilities/_variables.scss';
+
+.back {
+    padding-top: 64px;
+    padding-left: 120px;
+}
+
+.back span {
+    font-size: 16px;
+    line-height: 32px;
+    font-weight: 600;
+    font-family: variables.$font-primary;
+    padding-left: 8px;
+}
+
+.error01 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.lock {
+    width: 160px;
+    height: 160px;
+    margin: auto;
+    padding-top: 40px;
+}
+
+.protected {
+    text-align: center;
+    font-family: variables.$font-tertiary;
+    color: #000;
+    padding-top: 24px;
+    font-size: 40px;
+    line-height: 56px;
+}
+
+.detailsone {
+    text-align: center;
+    padding-left: 34%;
+    padding-right: 34%;
+    font-family: variables.$font-primary;
+    font-weight: 400;
+    color: #000;
+    font-size: 16px;
+    line-height: 28px;
+}
+
+@media (max-width: 1024px) {
+    .protected {
+        line-height: 44px;
+        padding-left: 0%;
+        padding-right: 0%;
+    }
+
+    .detailsone {
+        padding-left: 28%;
+        padding-right: 28%;
+    }
+}
+
+@media (max-width: 768px) {
+    .back {
+        padding-top: 48px;
+        padding-left: 32px;
+    }
+
+    .protected {
+        line-height: 44px;
+        padding-left: 0%;
+        padding-right: 0%;
+    }
+
+    .detailsone {
+        padding-left: 22%;
+        padding-right: 22%;
+    }
+}
+
+
+@media (max-width: 430px) {
+    .back {
+        padding-top: 40px;
+        padding-left: 24px;
+    }
+
+    .protected {
+        line-height: 44px;
+        padding-left: 4%;
+        padding-right: 4%;
+    }
+
+    .detailsone {
+        padding-left: 15%;
+        padding-right: 15%;
+    }
+}
+
+@media (max-width: 362px) {
+    .back {
+        padding-top: 32px;
+        padding-left: 24px;
+    }
+
+    .protected {
+        line-height: 44px;
+        padding-left: 0%;
+        padding-right: 0%;
+    }
+
+    .detailsone {
+        padding-left: 12%;
+        padding-right: 12%;
+    }
+}

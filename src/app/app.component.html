@@ -1,0 +1,13 @@
+<ng-container *ngIf="showLoader;else appTemplate">
+    <app-loader [progress]="progress" [year]="yearProgress"></app-loader>
+</ng-container>
+<ng-template #appTemplate>
+    <ng-container *ngIf="!isProcessing">
+        <div [ngClass]="isBlackBg == true ? 'darkBg' : 'whiteBg'">
+            <div class="container PadT32">
+                <app-header [isBlackBg]="isBlackBg"></app-header>
+            </div>
+        </div>
+    </ng-container>
+    <router-outlet></router-outlet>
+</ng-template>

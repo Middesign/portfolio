@@ -1,0 +1,433 @@
+@use 'src/assets/utilities/_variables.scss';
+
+.contact-border {
+    border: 1px solid #999999;
+    border-radius: 48px;
+}
+
+.contact-border img {
+    padding-bottom: 88px;
+    width: auto;
+}
+
+h1.contact_info {
+    font-size: 88px;
+    line-height: 88px;
+    padding: 88px 0px 48px 0px;
+    color: #fff;
+}
+
+.freelance-space {
+    padding-top: 80px;
+}
+
+.freelance-section {
+    border-radius: 48px;
+    border: 1px solid #999999;
+}
+
+.freelance-section div.col-lg-10 {
+    padding: 40px 0px 40px 72px;
+}
+
+.freelance-section div.col-lg-2 {
+    margin: auto;
+    text-align: center;
+}
+
+.col-stripes {
+    background-image: linear-gradient(45deg, #3ec5b8 5.56%, #28b4a6 5.56%, #28b4a6 50%, #3ec5b8 50%, #3ec5b8 55.56%, #28b4a6 55.56%, #28b4a6 100%);
+    background-size: 25.46px 25.46px;
+    border-radius: 48px;
+}
+
+.col-stripes span {
+    font-size: 88px;
+    font-family: variables.$font-tertiary;
+}
+
+.col-stripes .work-text {
+    color: #fff;
+}
+
+.freelance-text {
+    color: #E7F084 !important;
+}
+
+.freelance-text span {
+    text-decoration: line-through;
+    text-decoration-color: #E27F7F;
+}
+
+.social-links a,
+.SmoothmyTop a,
+.conatct-link {
+    text-decoration: none;
+}
+
+.gmailicon {
+    width: auto;
+}
+
+.footer_spacing {
+    margin-top: 72px;
+}
+
+.footer {
+    color: #fff;
+    padding: 20px 0px 20px 0px;
+}
+
+.footerlinks-primary {
+    font-weight: 600;
+    color: #fff;
+    font-family: variables.$font-primary;
+}
+
+.footerlinks-secondary {
+    font-weight: 400;
+    font-family: variables.$font-primary;
+    color: #999999;
+}
+
+.white-svg {
+    fill: #ffffff;
+}
+
+.social-links-space {
+    padding: 0px 0px 0px 0px;
+}
+
+.social-links {
+    list-style: none;
+    padding: 0;
+}
+
+.social-links li {
+    display: inline;
+    margin-right: 32px;
+}
+
+.mail-link-space {
+    padding-top: 0px;
+}
+
+.scrollbtn-position {
+    text-align: right;
+}
+
+@media (max-width: 2560px) {
+    .contact-border img {
+        padding-bottom: 88px;
+        width: auto;
+    }
+
+    h1.contact_info {
+        font-size: 88px;
+        line-height: 88px;
+        padding: 88px 0px 48px 0px;
+    }
+
+    .freelance-space {
+        padding-top: 80px;
+    }
+
+    .freelance-section div.col-lg-10 {
+        padding: 40px 0px 40px 72px;
+    }
+
+    .freelance-section,
+    .col-stripes {
+        border-radius: 48px;
+    }
+
+    .col-stripes span {
+        font-size: 88px;
+    }
+}
+
+@media (max-width: 1440px) {
+    .freelance-space {
+        padding-top: 80px;
+    }
+
+    .freelance-section div.col-lg-10 {
+        padding: 40px 0px 40px 72px;
+    }
+
+    .freelance-section,
+    .col-stripes {
+        border-radius: 48px;
+    }
+
+    .col-stripes span {
+        font-size: 88px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .contact-border img {
+        padding-bottom: 88px;
+        width: auto;
+    }
+
+    h1.contact_info {
+        font-size: 72px;
+        line-height: 72px;
+        padding: 88px 0px 40px 0px;
+    }
+
+    .freelance-space {
+        padding-top: 80px;
+    }
+
+    .freelance-section div.col-lg-10 {
+        padding: 40px 0px 40px 72px;
+    }
+
+    .freelance-section,
+    .col-stripes {
+        border-radius: 48px;
+    }
+
+    .social-links li {
+        margin-right: 32px;
+    }
+
+    .col-stripes span {
+        font-size: 72px;
+    }
+
+    .footer_spacing {
+        margin-top: 72px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .contact-border img {
+        padding-bottom: 88px;
+        width: auto;
+    }
+
+    h1.contact_info {
+        font-size: 60px;
+        line-height: 60px;
+        padding: 88px 0px 30px 0px;
+    }
+
+    .freelance-section div.col-lg-10 {
+        padding: 40px 0px 40px 72px;
+    }
+
+    .freelance-section,
+    .col-stripes {
+        border-radius: 48px;
+    }
+
+    .social-links li {
+        margin-right: 24px;
+    }
+
+    .col-stripes span {
+        font-size: 64px;
+    }
+
+    .footer_spacing {
+        margin-top: 56px;
+    }
+
+    .social-links-space {
+        padding: 0px 0px 0px 0px;
+    }
+
+    .scrollbtn-position {
+        text-align: right;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-border img {
+        padding-bottom: 56px;
+        width: auto;
+    }
+
+    .contact-border {
+        border-radius: 48px;
+    }
+
+    h1.contact_info {
+        font-size: 40px;
+        line-height: 40px;
+        padding: 56px 0px 20px 0px;
+    }
+
+    .freelance-space {
+        padding-top: 80px;
+    }
+
+    .freelance-section div.col-lg-10 {
+        padding: 24px 0px 24px 64px;
+    }
+
+    .freelance-section,
+    .col-stripes {
+        border-radius: 24px;
+    }
+
+    .col-stripes span {
+        font-size: 48px;
+    }
+
+    .social-links li {
+        margin-right: 16px;
+    }
+
+    .sm-text-white {
+        font-size: 14px;
+    }
+
+    .gmailicon {
+        width: auto;
+    }
+
+    .footer_spacing {
+        margin-top: 56px;
+    }
+
+    .footer {
+        padding: 20px 0px 20px 0px;
+    }
+
+    .logo-position {
+        text-align: inherit;
+    }
+
+    .social-links-space {
+        padding: 0px 0px 0px 0px;
+    }
+
+    .mail-link-space {
+        padding-top: 0px;
+    }
+
+    .scrollbtn-position {
+        text-align: right;
+    }
+}
+
+@media (max-width: 576px) {
+
+    .scrollbtn-position,
+    .logo-position {
+        text-align: center;
+    }
+
+    .social-links-space {
+        padding: 32px 0px 32px 0px;
+    }
+
+    .mail-link-space {
+        padding-top: 32px;
+    }
+
+}
+
+@media (max-width: 430px) {
+    .contact-border img {
+        padding-bottom: 56px;
+        width: 54%;
+    }
+
+    .contact-border {
+        border-radius: 48px;
+    }
+
+    .freelance-space {
+        padding-top: 40px;
+    }
+
+    .freelance-section div.col-lg-10 {
+        padding: 24px 0px 24px 24px;
+    }
+
+    .col-stripes span {
+        font-size: 24px;
+    }
+
+    .sm-text-white {
+        font-size: 14px;
+    }
+
+    .gmailicon {
+        width: 16%;
+    }
+
+    .footer_spacing {
+        margin-top: 28px;
+    }
+
+    .footer {
+        padding: 20px 0px 40px 0px;
+    }
+
+    .scrollbtn-position,
+    .logo-position {
+        text-align: center;
+    }
+
+    .social-links-space {
+        padding: 32px 0px 32px 0px;
+    }
+
+    .mail-link-space {
+        padding-top: 32px;
+    }
+}
+
+@media (max-width: 362px) {
+    .contact-border {
+        border-radius: 24px;
+    }
+
+    h1.contact_info {
+        font-size: 40px;
+        line-height: 40px;
+        padding: 32px 0px 20px 0px;
+    }
+}
+
+@media (max-width: 325px) {}
+
+
+.row,
+.row>*,
+.col-md-1,
+.col-md-2,
+.col-md-3,
+.col-md-4,
+.col-md-5,
+.col-md-6,
+.col-md-7,
+.col-md-8,
+.col-md-9,
+.col-md-10,
+.col-md-11,
+.col-lg-1,
+.col-lg-2,
+.col-lg-3,
+.col-lg-4,
+.col-lg-5,
+.col-lg-6,
+.col-lg-7,
+.col-lg-8,
+.col-lg-9,
+.col-lg-10,
+.col-lg-11,
+.col-4,
+.col-6,
+.col-8,
+.col-10,
+.col-12 {
+    padding-left: 0px;
+    padding-right: 0px;
+}

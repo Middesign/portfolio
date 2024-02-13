@@ -1,0 +1,154 @@
+@use 'src/assets/utilities/_variables.scss';
+
+@font-face {
+    font-family: 'Bitter';
+    src: url('./assets/fonts/Bitter-Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Baloo';
+    src: url('./assets/fonts/Baloo2-ExtraBold.ttf') format('truetype');
+}
+
+.row {
+    margin: 0px !important;
+    padding: 0px !important;
+}
+
+:host {
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.PadB8 {
+    padding-bottom: 8px;
+}
+
+.PadL24 {
+    padding-left: 24px;
+}
+
+.PadT12 {
+    padding-top: 12px;
+}
+
+.PadT24 {
+    padding-top: 24px;
+}
+
+.PadB24 {
+    padding-bottom: 24px;
+}
+
+.PadT32 {
+    padding-top: 32px;
+}
+
+.PadB32 {
+    padding-bottom: 32px;
+}
+
+.PadL32 {
+    padding-left: 32px;
+}
+
+.PadT40 {
+    padding-top: 40px;
+}
+
+.PadB40 {
+    padding-bottom: 40px;
+}
+
+.PadB48 {
+    padding-bottom: 48px;
+}
+
+.PadL56 {
+    padding-left: 56px;
+}
+
+.PadT64 {
+    padding-top: 64px;
+}
+
+.PadB72 {
+    padding-bottom: 72px;
+}
+
+.PadB88 {
+    padding-bottom: 88px;
+}
+
+.PadT88 {
+    padding-top: 88px;
+}
+
+.PadB120 {
+    padding-bottom: 120px;
+}
+
+.PadT120 {
+    padding-top: 120px;
+}
+
+.PadB160 {
+    padding-bottom: 160px;
+}
+
+.PadT160 {
+    padding-top: 160px;
+}
+
+body {
+    // font-family: variables.$font-primary;
+    // box-sizing: border-box;
+}
+
+.Font48 {
+    font-size: 48px;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.layout {
+    padding-left: 180px;
+    padding-right: 180px;
+}
+
+.sm-text {
+    font-family: variables.$font-primary;
+    font-size: 16px;
+    color: variables.$primary-color;
+    font-weight: 500;
+}
+
+.sm-text-white {
+    font-family: variables.$font-primary;
+    font-size: 16px;
+    color: variables.$second-color;
+    font-weight: 700;
+}
+
+.mini-text {
+    font-family: variables.$font-primary;
+    color: variables.$second-color;
+    font-weight: 700;
+}
+
+.mini-text-primary {
+    font-family: variables.$font-primary;
+    color: variables.$primary-color;
+    font-weight: 700;
+}
+
+.height-400 {
+    height: 400px;
+}
+
+.line-height56 {
+    line-height: 56px;
+}

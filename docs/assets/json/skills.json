@@ -1,0 +1,38 @@
+[
+  {
+    "id": 0,
+    "title": "UI Design"
+  },
+  {
+    "id": 1,
+    "title": "Wireframing"
+  },
+  {
+    "id": 2,
+    "title": "Prototyping"
+  },
+  {
+    "id": 3,
+    "title": "Design System"
+  },
+  {
+    "id": 4,
+    "title": "Icons Design"
+  },
+  {
+    "id": 5,
+    "title": "Illustration Design"
+  },
+  {
+    "id": 6,
+    "title": "3D Modeling"
+  },
+  {
+    "id": 7,
+    "title": "Video Editing"
+  },
+  {
+    "id": 8,
+    "title": "HTML, CSS (Basics)"
+  }
+]

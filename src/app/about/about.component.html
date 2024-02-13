@@ -1,0 +1,74 @@
+<div class="darkBg">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 name">
+                <h1>Midhun Vijayan</h1>
+            </div>
+            <div class="row about-section">
+                <div class="col-md-6 col-12">
+                    <div class="profileimagebox sticky-top">
+                    </div>
+                </div>
+                <div class="col-md-6 col-12">
+                    <ul>
+                        <li class="profiledetails" *ngFor="let item of aboutDetails">
+                            <h4>{{item.title}}</h4>
+                            <p>
+                                {{item.desc}}
+                            </p>
+                        </li>
+                    </ul>
+                    <h4 class="collaborate">I invite you to explore my portfolio. Let's collaborate to bring your
+                        digital vision to
+                        life.</h4>
+                </div>
+            </div>
+            <div class="col-12 academics-section">
+                <h1>Skills</h1>
+                <div class="row chips-container">
+                    <div class="skill-container" *ngFor="let skill of skills">
+                        {{ skill.title}}
+                    </div>
+                </div>
+                <p class="roles chips-spacing">SOFTWARE/ TOOLS</p>
+                <p class="academics-desc">Figma, Sketch, Adobe XD, Photoshop, Illustrator, After Effects, Premiere Pro,
+                    Maya, Blender, HTML, CSS (Basics)</p>
+            </div>
+            <div class="col-12"></div>
+            <div class="academics-section">
+                <h1>Academics</h1>
+                <div class="line"></div>
+                <div class="row academics-spacing">
+                    <div class="col-8 subhead">B.Sc Multimedia</div>
+                    <div class="col-4 subhead-2">2011 - 2014</div>
+                </div>
+                <div class="row academics-desc-spacing">
+                    <div class="col-8 academics-desc">Image Creative Education (Annamalai University)</div>
+                    <div class="col-4 academics-desc-2">Kottayam, Kerala</div>
+                </div>
+                <div class="line"></div>
+            </div>
+            <div class="academics-section">
+                <h1>Work Experience</h1>
+                <div class="line"></div>
+                <ng-container *ngFor="let field of experience">
+                    <div class="row academics-spacing">
+                        <div class="col-8 subhead">{{field.title}}</div>
+                        <div class="col-4 subhead-2">{{field.date}}</div>
+                    </div>
+                    <div class="row academics-desc-spacing">
+                        <div class="col-8">
+                            <p class="roles">{{field.subheading}}</p>
+                            <p class="academics-desc">{{field.desc}}</p>
+                        </div>
+                        <div class="col-4 academics-desc-2">{{field.place}}</div>
+                    </div>
+                    <div class="line"></div>
+                </ng-container>
+            </div>
+            <div class="row">
+                <app-footer [showFreelance]="false"></app-footer>
+            </div>
+        </div>
+    </div>
+</div>

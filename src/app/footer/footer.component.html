@@ -1,0 +1,57 @@
+<div class="col-12 contact-border text-center">
+    <h1 class="contact_info">Want to work<br />together?</h1>
+    <img class="cursor-pointer" [src]="imageSource" alt="Message" (mouseenter)="changeImage(true)"
+        (mouseleave)="changeImage(false)" (click)="openMail()">
+</div>
+<div *ngIf="showFreelance" class="col-12 freelance-space">
+    <div class="row freelance-section">
+        <div class="col-lg-10 col-sm-9 col-8 col-stripes">
+            <span class="freelance-text">
+                <span>Free</span>lance
+            </span>
+            <span class="work-text">work</span>
+        </div>
+        <div class="col-lg-2 col-sm-3 col-4">
+            <a class="conatct-link" href="mailto:midhunvijayan078@gmail.com">
+                <span class="me-3 sm-text-white fw-bold">Contact</span>
+                <img class="cursor-pointer gmailicon" src="assets/images/gmailicon.svg" alt="Mail">
+            </a>
+        </div>
+    </div>
+</div>
+<div class="col-12 footer_spacing">
+    <footer class="footer">
+        <div class="row align-items-baseline">
+            <div class="col-xl-3 col-lg-2 col-md-2 col-12 logo-position">
+                <img class="white-svg" src="assets/images/Mylogo-yellow.svg" alt="Me">
+            </div>
+            <div class="col-xl-6 col-lg-8 col-md-8 col-12 text-center social-links-space">
+                <div class="row social-links">
+                    <div class="col-md-2 col-4">
+                        <a class="footerlinks-primary" href="http://www.linkedin.com/in/midhun-vijayan-b78639157"
+                            target="_blank">Linkedin</a>
+                    </div>
+                    <div class="col-md-2 col-4">
+                        <a class="footerlinks-primary" href="https://dribbble.com/midhunvijayan"
+                            target="_blank">Dribble</a>
+                    </div>
+                    <div class="col-md-2 col-4">
+                        <a class="footerlinks-secondary" href="https://www.behance.net/midhunvija9bc9"
+                            target="_blank">Behance</a>
+                    </div>
+                    <div class="col-md-6 col-12 mail-link-space">
+                        <a class="footerlinks-secondary"
+                            href="mailto:midhunvijayan078@gmail.com">midhunvijayan078@gmail.com</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-2 col-md-2 col-12 scrollbtn-position">
+                <span class="SmoothmyTop">
+                    <a *ngIf="!hideProfile" href="#" class="me-3 sm-text-white fw-bold" (click)="scrollToTop()">Back
+                        to top</a>
+                    <img class="cursor-pointer" src="assets/images/topscroll.svg" alt="Me">
+                </span>
+            </div>
+        </div>
+    </footer>
+</div>

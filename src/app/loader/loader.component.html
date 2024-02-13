@@ -1,0 +1,46 @@
+<div class="loader-section">
+    <div class="row">
+        <div class="col-9 m-auto dp-space">
+            <div class="dp-container">
+                <div class="dp-content">
+                    <img class="cursor-pointer smile-img" src="assets/images/dp.svg" alt="Me">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-10 col-11 m-auto">
+            <div class="title-container text-center">
+                <ul class="title">
+                    <!-- <li>UI UX</li>
+                    <li>Design System</li>
+                    <li>Prototyping</li>
+                    <li>Icons</li>
+                    <li>Illustration</li>
+                    <li>Branding</li>
+                    <li>Visual Design</li>
+                    <li>Animation</li> -->
+                    <li>Visual Design</li>
+                    <li>Branding</li>
+                    <li>Illustration</li>
+                    <li>Icons</li>
+                    <li>Prototyping</li>
+                    <li>Design System</li>
+                    <li>UI UX</li>
+                    <li>Animation</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-4 col-md-6 col-8 m-auto loader-space">
+            <div class="bar-container">
+                <div #progressBar class="progress-bar" [style.width.%]="progress"></div>
+            </div>
+            <div class="d-flex justify-content-between">
+                <p class="subheading">{{year}}</p>
+                <p class="subheading">{{progress}}%</p>
+            </div>
+        </div>
+    </div>
+</div>

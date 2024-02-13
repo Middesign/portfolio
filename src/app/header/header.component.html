@@ -1,0 +1,42 @@
+<!-- Desktop view -->
+<div *ngIf="!isMobileView" class="d-flex justify-content-center align-items-center"
+    [ngClass]="isBlackBg == true ? 'darkBg' : 'whiteBg'">
+    <img *ngIf="!isBlackBg" class="logo-icon cursor-pointer" src="assets/images/Mylogo.svg" alt="Me"
+        (click)="navigateToHome()">
+    <img *ngIf="isBlackBg" class="white-svg cursor-pointer" src="assets/images/Mylogo-yellow.svg" alt="Me"
+        (click)="navigateToHome()">
+    <ul class="d-flex flex-row navbar-nav m-auto">
+        <li class="nav-item">
+            <a (click)="navigateToUnderConstruction()" class="cursor-pointer nav-link link-items"
+                [ngClass]="isBlackBg == true ? 'darkText' : 'whiteText'" aria-current="page">
+                Selected Works
+            </a>
+        </li>
+        <li class="nav-item">
+            <a (click)="navigateToAboutMe()" class="cursor-pointer nav-link link-items">About Me</a>
+        </li>
+    </ul>
+    <div class="sticky-wrapper">
+        <img class="hire-button" [src]="hireMe" alt="Hire Me" (mouseenter)="changeInHireme(true)"
+            (mouseleave)="changeInHireme(false)" (click)="openMail()">
+    </div>
+</div>
+<!-- Mobile View -->
+<div *ngIf="isMobileView" class="d-flex justify-content-between">
+    <img [ngClass]="isBlackBg == true ? 'whiteIcon' : 'darkIcon'" src="assets/images/More-icon.svg" alt="Me"
+        (click)="fnCollapseClick()">
+    <div class="sticky-wrapper">
+        <img class="hire-button" [src]="hireMe" alt="Hire Me" (mouseenter)="changeInHireme(true)"
+            (mouseleave)="changeInHireme(false)" (click)="openMail()">
+    </div>
+</div>
+<div id="myNav" class="overlay">
+    <img class="closebtn" src="assets/images/close-icon.svg" alt="Me" (click)="closeNav()">
+    <div class="overlay-content">
+        <img class="logo-img cursor-pointer" src="assets/images/Mylogo-yellow.svg" alt="Me"
+            (click)="navigateToHome();closeNav()">
+        <a (click)="navigateToUnderConstruction();closeNav()">Selected works</a>
+        <hr>
+        <a (click)="navigateToAboutMe();closeNav()">About me</a>
+    </div>
+</div>

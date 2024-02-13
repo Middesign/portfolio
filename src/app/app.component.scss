@@ -1,0 +1,20 @@
+.PadT32 {
+    padding-top: 32px !important;
+}
+
+.darkBg {
+    background-color: #000;
+    color: #fff;
+}
+
+.whiteBg {
+    background-color: #fff;
+    color: #000;
+}
+
+@media (max-width: 430px) {
+    .container {
+        padding-right: calc(var(--bs-gutter-x) * 1.2);
+        padding-left: calc(var(--bs-gutter-x) * 1.2);
+    }
+}
