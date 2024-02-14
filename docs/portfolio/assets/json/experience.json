@@ -1,0 +1,34 @@
+[
+  {
+    "id": 0,
+    "title": "WayCool Foods and Products Pvt. Ltd",
+    "date": "2022 - Present",
+    "subheading": "Roles and responsibilities",
+    "desc": "Dedicated product designer at Mandione, responsible for developing new features, revamping existing designs, creating wireframes, utilizing Illustrator, incorporating animation, and actively contributing to the design system for all subsidiary products within the company. Additionally, I provide guidance to fellow designers in the process of revamping various products.",
+    "place": "Bengaluru"
+  },
+  {
+    "id": 1,
+    "title": "Lollypop UI UX Design Studio",
+    "date": "2019 - 2022",
+    "subheading": "Roles and responsibilities",
+    "desc": "Engaged in various projects, including mobile applications, dashboards, and websites, with a focus on wire-framing, UI design, animations, iconography, branding, and design systems and I provide guidance to fellow designers.",
+    "place": "Bengaluru, Chennai"
+  },
+  {
+    "id": 2,
+    "title": "2adpro Media Solutions Pvt.Ltd",
+    "date": "2015 - 2019",
+    "subheading": "Roles and responsibilities",
+    "desc": "I am actively engaged in diverse responsibilities such as crafting compelling landing pages, designing user-friendly interfaces for mobile applications, contributing to digital marketing , and incorporating animations and micro-interactions for enhanced user experiences. Additionally, I play a pivotal role in supporting and guiding junior designers",
+    "place": "Chennai"
+  },
+  {
+    "id": 3,
+    "title": "Next Education India Pvt.Ltd",
+    "date": "2014 - 2015",
+    "subheading": "Roles and responsibilities",
+    "desc": "User interface design for e-learning platforms, including seamless module integrations and the creation of engaging 2D animation stories, rhymes, animations, and motion graphics. My role is centered on making the e-learning experience visually appealing and user-friendly, with a focus on both creativity and functionality.",
+    "place": "Hyderabad"
+  }
+]
