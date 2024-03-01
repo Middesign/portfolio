@@ -198,6 +198,18 @@ ul {
     font-family: variables.$font-tertiary;
 }
 
+@media (min-width: 2400px) {
+
+    .container,
+    .container-lg,
+    .container-md,
+    .container-sm,
+    .container-xl,
+    .container-xxl {
+        max-width: 1600px;
+    }
+}
+
 @media (max-width: 1200px) {
     .title {
         font-size: 154px;

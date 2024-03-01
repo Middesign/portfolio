@@ -116,6 +116,18 @@ h1.contact_info {
     text-align: right;
 }
 
+@media (min-width: 2400px) {
+
+    .container,
+    .container-lg,
+    .container-md,
+    .container-sm,
+    .container-xl,
+    .container-xxl {
+        max-width: 1600px;
+    }
+}
+
 @media (max-width: 2560px) {
     .contact-border img {
         padding-bottom: 88px;

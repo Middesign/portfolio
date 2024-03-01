@@ -46,6 +46,18 @@
     line-height: 28px;
 }
 
+@media (min-width: 2400px) {
+
+    .container,
+    .container-lg,
+    .container-md,
+    .container-sm,
+    .container-xl,
+    .container-xxl {
+        max-width: 1600px;
+    }
+}
+
 @media (max-width: 1024px) {
     .protected {
         line-height: 44px;
