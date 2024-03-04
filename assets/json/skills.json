@@ -1,7 +1,7 @@
 [
   {
     "id": 0,
-    "title": "UI Design"
+    "title": "UI,UX Design"
   },
   {
     "id": 1,
@@ -17,22 +17,38 @@
   },
   {
     "id": 4,
-    "title": "Icons Design"
+    "title": "Animation"
   },
   {
     "id": 5,
-    "title": "Illustration Design"
+    "title": "Icons Design"
   },
   {
     "id": 6,
-    "title": "3D Modeling"
+    "title": "Illustration Design"
   },
   {
     "id": 7,
-    "title": "Video Editing"
+    "title": "Branding"
   },
   {
     "id": 8,
+    "title": "Visual Design"
+  },
+  {
+    "id": 9,
+    "title": "3D Modeling"
+  },
+  {
+    "id": 10,
+    "title": "Video Editing"
+  },
+  {
+    "id": 11,
+    "title": "Motion Graphics"
+  },
+  {
+    "id": 12,
     "title": "HTML, CSS (Basics)"
   }
 ]
