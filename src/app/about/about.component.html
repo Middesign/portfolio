@@ -30,14 +30,23 @@
                         {{ skill.title}}
                     </div>
                 </div>
-                <p class="roles chips-spacing">SOFTWARE/ TOOLS</p>
+                <!-- <p class="roles chips-spacing">SOFTWARE/ TOOLS</p>
                 <p class="academics-desc">Figma, Sketch, Adobe XD, Photoshop, Illustrator, After Effects, Premiere Pro,
-                    Maya, Blender, HTML, CSS (Basics)</p>
+                    Maya, Blender, HTML, CSS (Basics)</p> -->
+                <div class="row skill-set-spacing">
+                    <div class="col-md-6 col-12 skill-img01-container">
+                        <img class="cursor-pointer skill-img01" src="assets/images/skillset01.png" alt="Me">
+                    </div>
+                    <div class="col-md-6 col-12">
+                        <img class="cursor-pointer skill-img02" src="assets/images/skillset02.png" alt="Me">
+                    </div>
+                </div>
+
             </div>
-            <div class="col-12"></div>
+
             <div class="academics-section">
                 <h1>Academics</h1>
-                <div class="line"></div>
+                <div class="line-separator "></div>
                 <div class="row academics-spacing">
                     <div class="col-8 subhead">B.Sc Multimedia</div>
                     <div class="col-4 subhead-2">2011 - 2014</div>
@@ -46,11 +55,11 @@
                     <div class="col-8 academics-desc">Image Creative Education (Annamalai University)</div>
                     <div class="col-4 academics-desc-2">Kottayam, Kerala</div>
                 </div>
-                <div class="line"></div>
+                <div class="line-separator "></div>
             </div>
             <div class="academics-section">
                 <h1>Work Experience</h1>
-                <div class="line"></div>
+                <div class="line-separator "></div>
                 <ng-container *ngFor="let field of experience">
                     <div class="row academics-spacing">
                         <div class="col-8 subhead">{{field.title}}</div>
@@ -63,10 +72,10 @@
                         </div>
                         <div class="col-4 academics-desc-2">{{field.place}}</div>
                     </div>
-                    <div class="line"></div>
+                    <div class="line-separator "></div>
                 </ng-container>
             </div>
-            <div class="row">
+            <div class="row footer-spacing">
                 <app-footer [showFreelance]="false"></app-footer>
             </div>
         </div>

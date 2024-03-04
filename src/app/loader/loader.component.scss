@@ -86,10 +86,10 @@ ul {
 }
 
 .title {
-    font-family: variables.$font-tertiary;
-    font-weight: 400;
+    font-family: variables.$font-sixth;
+    font-weight: 700;
     color: #fff;
-    font-size: 154px;
+    font-size: 144px;
     line-height: 198px;
     animation: changeText 6s cubic-bezier(0.23, 1, 0.32, 1.2) infinite;
 }
@@ -195,7 +195,8 @@ ul {
     line-height: 40px;
     font-weight: 600;
     color: #fff;
-    font-family: variables.$font-tertiary;
+    font-family: variables.$font-primary;
+    padding-top: 16px;
 }
 
 @media (min-width: 2400px) {
@@ -212,7 +213,7 @@ ul {
 
 @media (max-width: 1200px) {
     .title {
-        font-size: 154px;
+        font-size: 144px;
     }
 }
 
@@ -223,7 +224,7 @@ ul {
     }
 
     .title {
-        font-size: 120px;
+        font-size: 108px;
     }
 
     .loader-space {
@@ -242,7 +243,7 @@ ul {
     }
 
     .title {
-        font-size: 90px;
+        font-size: 82px;
         line-height: 198px;
     }
 
@@ -342,7 +343,7 @@ ul {
     }
 
     .title {
-        font-size: 64px;
+        font-size: 48px;
         line-height: 158px;
     }
 
@@ -443,7 +444,7 @@ ul {
     }
 
     .title {
-        font-size: 42px;
+        font-size: 40px;
         line-height: 118px;
     }
 
@@ -536,7 +537,7 @@ ul {
     }
 
     .title {
-        font-size: 42px;
+        font-size: 36px;
     }
 
     .subheading {

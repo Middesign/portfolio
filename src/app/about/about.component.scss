@@ -4,11 +4,16 @@
     background-color: black;
 }
 
+p {
+    margin-bottom: 0.2rem;
+}
+
 .name h1 {
-    font-size: 200px;
+    font-size: 186px;
     line-height: 180px;
     color: #fff;
-    font-family: variables.$font-tertiary;
+    font-family: variables.$font-sixth;
+    font-weight: 700;
     text-align: center;
     margin-top: 48px;
     margin-bottom: 72px;
@@ -31,7 +36,7 @@ ul {
     position: sticky !important;
     width: 560px;
     height: 560px;
-    border-radius: 24px;
+    border-radius: 0px;
     z-index: 0 !important;
 }
 
@@ -40,6 +45,7 @@ ul {
     color: #999999;
     font-size: 16px;
     line-height: 24px;
+    text-transform: uppercase;
     padding: 80px 0px 0px 0px;
 }
 
@@ -53,10 +59,11 @@ ul {
 
 .collaborate {
     padding-top: 80px;
-    font-family: variables.$font-tertiary;
+    font-family: variables.$font-sixth;
     color: #E7F084;
     font-size: 40px;
     line-height: 52px;
+    font-weight: 700;
 }
 
 .academics-section {
@@ -64,19 +71,20 @@ ul {
 }
 
 .academics-section h1 {
-    font-family: variables.$font-tertiary;
+    font-family: variables.$font-seventh;
     color: #fff;
-    font-size: 88px;
-    line-height: 88px;
+    font-size: 56px;
+    line-height: 72px;
+    font-weight: 500;
 }
 
-.line {
+.line-separator {
     padding-top: 32px;
     border-bottom: 1px solid #434343;
     width: 100%;
 }
 
-.line:last-child {
+.line-separator :last-child {
     border-bottom: 0px;
 }
 
@@ -87,16 +95,16 @@ ul {
 .subhead {
     font-family: variables.$font-primary;
     color: #E7F084;
-    font-size: 40px;
-    line-height: 48px;
+    font-size: 32px;
+    line-height: 40px;
 }
 
 .subhead-2 {
     font-family: variables.$font-primary;
     font-weight: 300;
     color: #fff;
-    font-size: 40px;
-    line-height: 48px;
+    font-size: 32px;
+    line-height: 40px;
     text-align: right;
 }
 
@@ -108,16 +116,16 @@ ul {
     font-family: variables.$font-primary;
     font-weight: 300;
     color: #fff;
-    font-size: 24px;
-    line-height: 40px;
+    font-size: 16px;
+    line-height: 32px;
 }
 
 .academics-desc-2 {
     font-family: variables.$font-primary;
     font-weight: 300;
     color: #9F9F9F;
-    font-size: 24px;
-    line-height: 44px;
+    font-size: 16px;
+    line-height: 24px;
     text-align: right;
 }
 
@@ -146,36 +154,108 @@ ul {
     color: #fff;
     padding: 16px 24px 16px 24px !important;
     margin: 16px 16px 0px 0px !important;
-    border: 1px solid #fff;
+    border: 1px solid #474747;
     font-weight: 400;
     border-radius: 16px;
     display: inline-block;
     width: auto;
 }
 
+.skill-img01,
+.skill-img02 {
+    width: 72%;
+    height: auto;
+    object-fit: contain;
+    object-position: center;
+}
+
+.skill-img02 {
+    padding: 0px 0px 0px 32px !important;
+}
+
+.skill-set-spacing {
+    padding-top: 88px !important;
+}
+
+.footer-spacing {
+    padding-top: 120px !important;
+}
+
+.skill-img01-container {
+    display: flex;
+    justify-content: flex-end;
+}
+
 @media (max-width: 2560px) {
     .name h1 {
-        font-size: 200px;
+        font-size: 186px;
         line-height: 180px;
         margin-top: 48px;
         margin-bottom: 72px;
     }
 
+    .skill-set-spacing {
+        padding-top: 88px !important;
+    }
+
+    .footer-spacing {
+        padding-top: 120px !important;
+    }
+
+    .skill-img01,
+    .skill-img02 {
+        width: 72%;
+    }
+
+    .skill-img02 {
+        padding: 0px 0px 0px 32px !important;
+    }
+
+    .skill-img01-container {
+        display: flex;
+        justify-content: flex-end;
+    }
 }
 
 @media (max-width: 1440px) {
     .name h1 {
-        font-size: 200px;
+        font-size: 186px;
         line-height: 180px;
         margin-top: 48px;
         margin-bottom: 72px;
     }
 
+    .skill-set-spacing {
+        padding-top: 88px !important;
+    }
+
+    .footer-spacing {
+        padding-top: 120px !important;
+    }
+
+    .academics-section h1 {
+        font-size: 56px;
+        line-height: 72px;
+    }
+
+    .skill-img01,
+    .skill-img02 {
+        width: 72%;
+    }
+
+    .skill-img02 {
+        padding: 0px 0px 0px 32px !important;
+    }
+
+    .skill-img01-container {
+        display: flex;
+        justify-content: flex-end;
+    }
 }
 
 @media (max-width: 1200px) {
     .name h1 {
-        font-size: 200px;
+        font-size: 186px;
         line-height: 180px;
         margin-top: 48px;
         margin-bottom: 72px;
@@ -189,11 +269,38 @@ ul {
     .profileimagebox {
         width: 560px;
         height: 560px;
-        border-radius: 24px;
+        border-radius: 0px;
     }
 
     .profiledetails h4 {
         padding: 80px 0px 0px 0px;
+    }
+
+    .skill-set-spacing {
+        padding-top: 88px !important;
+    }
+
+    .footer-spacing {
+        padding-top: 120px !important;
+    }
+
+    .academics-section h1 {
+        font-size: 56px;
+        line-height: 72px;
+    }
+
+    .skill-img01,
+    .skill-img02 {
+        width: 72%;
+    }
+
+    .skill-img02 {
+        padding: 0px 0px 0px 32px !important;
+    }
+
+    .skill-img01-container {
+        display: flex;
+        justify-content: flex-end;
     }
 }
 
@@ -213,7 +320,7 @@ ul {
     .profileimagebox {
         width: 400px;
         height: 400px;
-        border-radius: 24px;
+        border-radius: 0px;
     }
 
     .profiledetails h4 {
@@ -221,8 +328,8 @@ ul {
     }
 
     .academics-section h1 {
-        font-size: 88px;
-        line-height: 88px;
+        font-size: 40px;
+        line-height: 48px;
     }
 
     .academics-section {
@@ -251,6 +358,34 @@ ul {
         padding: 16px 24px 16px 24px !important;
         margin: 16px 16px 0px 0px !important;
     }
+
+    .skill-set-spacing {
+        padding-top: 88px !important;
+    }
+
+    .footer-spacing {
+        padding-top: 114px !important;
+    }
+
+    .skill-img01,
+    .skill-img02 {
+        width: 72%;
+    }
+
+    .skill-img02 {
+        padding: 0px 0px 0px 32px !important;
+    }
+
+    .profiledetails p {
+        font-size: 24px;
+        line-height: 40px;
+        padding-top: 12px;
+    }
+
+    .skill-img01-container {
+        display: flex;
+        justify-content: flex-end;
+    }
 }
 
 @media (max-width: 768px) {
@@ -269,12 +404,12 @@ ul {
     .profileimagebox {
         width: 280px;
         height: 280px;
-        border-radius: 24px;
+        border-radius: 0px;
     }
 
     .profiledetails p {
-        font-size: 24px;
-        line-height: 40px;
+        font-size: 20px;
+        line-height: 36px;
         padding-top: 12px;
     }
 
@@ -285,8 +420,8 @@ ul {
     }
 
     .academics-section h1 {
-        font-size: 72px;
-        line-height: 72px;
+        font-size: 36px;
+        line-height: 44px;
     }
 
     .academics-section {
@@ -309,7 +444,7 @@ ul {
         line-height: 44px;
     }
 
-    .line {
+    .line-separator {
         padding-top: 32px;
     }
 
@@ -328,6 +463,28 @@ ul {
         line-height: 28px;
         padding: 16px 24px 16px 24px !important;
         margin: 16px 16px 0px 0px !important;
+    }
+
+    .skill-set-spacing {
+        padding-top: 68px !important;
+    }
+
+    .footer-spacing {
+        padding-top: 88px !important;
+    }
+
+    .skill-img01,
+    .skill-img02 {
+        width: 80%;
+    }
+
+    .skill-img02 {
+        padding: 0px 0px 0px 32px !important;
+    }
+
+    .skill-img01-container {
+        display: flex;
+        justify-content: flex-end;
     }
 }
 
@@ -349,7 +506,7 @@ ul {
     .profileimagebox {
         width: 100%;
         height: 240px;
-        border-radius: 24px;
+        border-radius: 0px;
     }
 
     .profiledetails p {
@@ -369,11 +526,11 @@ ul {
     }
 
     .academics-section h1 {
-        font-size: 48px;
-        line-height: 64px;
+        font-size: 32px;
+        line-height: 40px;
     }
 
-    .line {
+    .line-separator {
         padding-top: 16px;
     }
 
@@ -405,6 +562,28 @@ ul {
         padding: 12px 14px 12px 14px !important;
         margin: 16px 8px 0px 0px !important;
     }
+
+    .skill-set-spacing {
+        padding-top: 54px !important;
+    }
+
+    .footer-spacing {
+        padding-top: 64px !important;
+    }
+
+    .skill-img01,
+    .skill-img02 {
+        width: 100%;
+    }
+
+    .skill-img02 {
+        padding: 16px 0px 0px 0px !important;
+    }
+
+    .skill-img01-container {
+        display: flex;
+        justify-content: flex-start;
+    }
 }
 
 @media (max-width: 362px) {
@@ -413,6 +592,28 @@ ul {
         line-height: 24px;
         padding: 12px 14px 12px 14px !important;
         margin: 16px 8px 0px 0px !important;
+    }
+
+    .skill-set-spacing {
+        padding-top: 40px !important;
+    }
+
+    .footer-spacing {
+        padding-top: 48px !important;
+    }
+
+    .skill-img01,
+    .skill-img02 {
+        width: 100%;
+    }
+
+    .skill-img02 {
+        padding: 16px 0px 0px 0px !important;
+    }
+
+    .skill-img01-container {
+        display: flex;
+        justify-content: flex-start;
     }
 }
 
@@ -427,13 +628,27 @@ ul {
     .profileimagebox {
         width: 100%;
         height: 224px;
-        border-radius: 16px;
+        border-radius: 0px;
     }
 
     .subhead,
     .subhead-2 {
         font-size: 16px;
         line-height: 28px;
+    }
+
+    .skill-img01,
+    .skill-img02 {
+        width: 100%;
+    }
+
+    .skill-img02 {
+        padding: 16px 0px 0px 0px !important;
+    }
+
+    .skill-img01-container {
+        display: flex;
+        justify-content: flex-start;
     }
 }
 

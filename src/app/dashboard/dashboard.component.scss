@@ -1,8 +1,18 @@
 @use 'src/assets/utilities/_variables.scss';
 
+h2 {
+  margin-bottom: 0rem;
+}
+
+ol,
+ul {
+  padding-left: 0rem;
+  margin-bottom: 0rem;
+}
+
 .header {
   height: auto;
-  background: url('../../assets/images/Line-BG.svg') repeat 0px top #fff;
+  // background: url('../../assets/images/Line-BG.svg') repeat 0px top #fff;
   background-size: contain;
   // width: 100%;
 }
@@ -16,11 +26,13 @@
   margin-right: 1rem !important;
 }
 
-.name_title h2 {
-  font-size: 48px;
-  font-weight: 500;
+.name-title h2 {
+  font-size: 40px;
+  line-height: 56px;
+  font-weight: 400;
   color: variables.$primary-color;
-  padding: 72px 0px 12px 0px;
+  letter-spacing: -1px;
+  padding: 140px 0px 12px 0px;
 }
 
 .mail {
@@ -40,21 +52,22 @@
   padding-top: 0px;
 }
 
-.job_title ul {
+.job-title ul {
   padding: 0;
   list-style: none;
+  padding-top: 24px;
 }
 
-.job_title ul li {
-  font-size: 180px;
-  font-weight: 700;
+.job-title ul li {
+  font-size: 164px;
+  font-weight: 800;
   color: #000;
-  font-family: variables.$font-tertiary;
+  font-family: variables.$font-fifth;
   line-height: normal;
 }
 
-.job_title ul li span.outline {
-  -webkit-text-stroke: 4px #000;
+.job-title ul li span.outline {
+  -webkit-text-stroke: 3px #000;
   -webkit-text-fill-color: white;
   // outline: #000;
   // color: white;
@@ -90,7 +103,7 @@
 .projects h4 {
   font-size: 64px;
   font-weight: 700;
-  font-family: variables.$font-secondary;
+  font-family: variables.$font-sixth;
   color: #000;
   line-height: 72px;
   margin: 0px !important;
@@ -100,7 +113,7 @@
 sub.year {
   font-size: 16px;
   font-weight: 600;
-  font-family: variables.$font-secondary;
+  font-family: variables.$font-primary;
   color: #000;
   line-height: 24px;
 }
@@ -108,15 +121,21 @@ sub.year {
 .experience p,
 .projects p {
   font-size: 16px;
-  font-weight: 600;
-  font-family: variables.$font-secondary;
+  font-weight: 400;
+  font-family: variables.$font-primary;
   color: #000;
   line-height: 24px;
   margin: 0px !important;
 }
 
-.experience img,
 .projects img {
+  position: absolute;
+  right: 5px;
+  top: 22px;
+  width: auto;
+}
+
+.experience img {
   position: absolute;
   right: 12px;
   top: 22px;
@@ -133,8 +152,12 @@ sub.year {
   position: relative;
 }
 
-.exp_card_spacing {
+.exp-card-spacing {
   padding: 0px 0px 0px 0px;
+}
+
+.project-section {
+  padding: 100px 0px 0px 0px !important;
 }
 
 .no-pad {
@@ -154,45 +177,63 @@ sub.year {
   padding-bottom: 112px !important;
 }
 
-.passion h2 {
+.passion-header {
   font-size: 56px;
   line-height: 64px;
   font-weight: 700;
-  font-family: variables.$font-tertiary;
+  font-family: variables.$font-primary;
   padding-right: 100px;
 }
 
-.passion p {
-  font-size: 16px;
-  line-height: 28px;
-  font-weight: 400;
-  font-family: variables.$font-primary;
-}
-
-.project_intro_spacing {
-  padding-top: 120px !important;
-}
-
-.project_intro h1 {
-  font-size: 88px;
-  line-height: 88px;
-  font-weight: 800;
-  font-family: variables.$font-tertiary;
-  color: #fff;
+.passion-content {
   padding-bottom: 48px;
 }
 
-.project_intro p {
-  font-size: 28px;
-  line-height: 44px;
-  font-weight: 300;
+.passion-content h2 {
+  border: 1px solid #000;
+  font-family: variables.$font-seventh;
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 500;
+  color: #000;
+  width: fit-content;
+  padding: 4px 16px;
+  margin-bottom: 16px;
+}
+
+.passion-content p {
+  font-family: variables.$font-primary;
+  font-size: 16px;
+  line-height: 28px;
+  font-weight: 400;
+  color: #000;
+}
+
+.project-intro-spacing {
+  padding-top: 100px !important;
+  padding-bottom: 80px !important;
+}
+
+.project-intro h1 {
+  font-family: variables.$font-primary;
+  color: #fff;
+  font-size: 56px;
+  line-height: 72px;
+  padding-bottom: 24px;
+  font-weight: 500;
+}
+
+.project-intro p {
+  font-size: 24px;
+  line-height: 34px;
+  font-weight: 400;
   font-family: variables.$font-primary;
   color: #CCCCCC;
 }
 
-.work_card {
+.work-card {
   // padding: 32px;
-  border-radius: 16px;
+  // border-radius: 16px;
   color: #fff;
   margin: 6px 0;
   position: relative;
@@ -200,9 +241,9 @@ sub.year {
   overflow: hidden;
 }
 
-.small_card {
+.small-card {
   // padding: 10px;
-  border-radius: 16px;
+  // border-radius: 16px;
   color: #fff;
   position: relative;
   height: 184px;
@@ -210,6 +251,7 @@ sub.year {
 }
 
 .item1 h4 {
+  font-weight: 400;
   font-size: 32px;
   line-height: 32px;
   position: absolute;
@@ -220,14 +262,16 @@ sub.year {
 
 .item2 h4,
 .item3 h4 {
-  font-size: 48px;
-  line-height: 56px;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 48px;
   margin-bottom: 0px !important;
 }
 
 .item4 h4,
 .item5 h4,
 .item6 h4 {
+  font-weight: 400;
   font-size: 24px;
   line-height: 32px;
   position: absolute;
@@ -236,6 +280,7 @@ sub.year {
   margin-bottom: 0px !important;
 }
 
+.item4 h4,
 .item6 h4 {
   color: #000;
 }
@@ -269,18 +314,36 @@ sub.year {
   padding-left: 5px !important;
 }
 
-.work_card.item1 .card-01:hover,
-.work_card.item2 .card-02:hover,
-.work_card.item3 .card-03:hover,
-.work_card.item4 .card-04:hover,
-.small_card.item5 .card-05:hover,
-.small_card.item6 .card-06:hover,
-.work_card.item1 .item1-handle:hover,
-.work_card.item2 .item2-handle:hover,
-.work_card.item3 .item3-handle:hover,
-.work_card.item4 .item4-handle:hover,
-.small_card.item5 .item5-handle:hover,
-.small_card.item6 .item6-handle:hover {
+.work-card.item1:hover,
+.work-card.item2:hover,
+.work-card.item3:hover,
+.work-card.item4:hover,
+.small-card.item5:hover,
+.small-card.item6:hover {
+  border-radius: 32px;
+}
+
+.work-card.item1,
+.work-card.item2,
+.work-card.item3,
+.work-card.item4,
+.small-card.item5,
+.small-card.item6 {
+  transition: border-radius .3s ease-in-out;
+}
+
+.work-card.item1 .card-01:hover,
+.work-card.item2 .card-02:hover,
+.work-card.item3 .card-03:hover,
+.work-card.item4 .card-04:hover,
+.small-card.item5 .card-05:hover,
+.small-card.item6 .card-06:hover,
+.work-card.item1 .item1-handle:hover,
+.work-card.item2 .item2-handle:hover,
+.work-card.item3 .item3-handle:hover,
+.work-card.item4 .item4-handle:hover,
+.small-card.item5 .item5-handle:hover,
+.small-card.item6 .item6-handle:hover {
   transform: scale(1.1);
 }
 
@@ -289,14 +352,14 @@ sub.year {
   // background: url('../../assets/images/card-01.png') no-repeat center center/90% auto #79B58A;
 }
 
-.work_card.item1 .card-01 {
+.work-card.item1 .card-01 {
   width: 100%;
   height: 100%;
   object-fit: contain;
   object-position: center;
   clip-path: padding-box;
   background-repeat: no-repeat;
-  transition: transform .3s ease-in-out;
+  transition: transform .4s ease-in-out;
 }
 
 .item2 {
@@ -317,7 +380,7 @@ sub.year {
   background-color: rgba(0, 0, 0, 0);
 }
 
-.work_card.item2 .card-02 {
+.work-card.item2 .card-02 {
   display: block;
   width: 100%;
   height: 100%;
@@ -328,7 +391,7 @@ sub.year {
   transition: transform .3s ease-in-out;
 }
 
-.work_card.item3 .card-03 {
+.work-card.item3 .card-03 {
   // margin-top: -64px;
   display: block;
   width: 100%;
@@ -350,7 +413,7 @@ sub.year {
   // background: url('../../assets/images/card-04.png') no-repeat center center/100% auto #DCDE81;
 }
 
-.work_card.item4 .card-04 {
+.work-card.item4 .card-04 {
   display: block;
   width: 100%;
   height: 100%;
@@ -362,16 +425,16 @@ sub.year {
 }
 
 .item5 {
-  background-color: #90A7EB;
+  background-color: #8d6bb3;
   margin: 6px 0;
   // background: url('../../assets/images/card-05.png') no-repeat center center/100% auto #90A7EB;
 }
 
-.small_card.item5 .card-05 {
+.small-card.item5 .card-05 {
   display: block;
   width: 100%;
-  height: 100%;
-  object-fit: contain;
+  // height: 100%;
+  object-fit: cover;
   object-position: center;
   clip-path: padding-box;
   background-repeat: no-repeat;
@@ -385,7 +448,7 @@ sub.year {
   // background: url('../../assets/images/card-06.png') no-repeat center center/100% auto #fff;
 }
 
-.small_card.item6 .card-06 {
+.small-card.item6 .card-06 {
   display: block;
   width: 100%;
   height: 100%;
@@ -569,7 +632,7 @@ h1.slide-title {
   color: #fff;
   font-size: 88px;
   font-weight: 800;
-  font-family: variables.$font-secondary;
+  font-family: variables.$font-primary;
   line-height: 88px;
 }
 
@@ -586,20 +649,130 @@ h1.slide-title {
   fill: #ffffff;
 }
 
+.portfolio-box01 {
+  border: 1px solid #474747;
+  margin-bottom: 40px !important;
+  height: 400px;
+  display: flex;
+  // overflow: hidden;
+}
+
+.portfolio-box02 {
+  border: 1px solid #474747;
+  margin-bottom: 40px !important;
+  // height: 400px;
+  display: flex;
+  // overflow: hidden;
+}
+
+.portfolio-content {
+  padding: 48px !important;
+  // height: 100%;
+  position: relative;
+}
+
+.portfolio-header h2 {
+  font-size: 32px;
+  line-height: 40px;
+  font-weight: 500;
+  color: #fff;
+  font-family: variables.$font-seventh;
+  padding-bottom: 14px;
+}
+
+.portfolio-header p {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #A4A4A4;
+  font-family: variables.$font-primary;
+}
+
+.portfolio-header-spacing {
+  margin-bottom: 96px;
+}
+
+.portfolio-header01-spacing {
+  margin-bottom: 0px !important;
+}
+
+.box02-Lspacing {
+  padding-left: 20px !important;
+}
+
+.box02-Rspacing {
+  padding-right: 20px !important;
+}
+
+.portfolio-subdetails {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 48px;
+}
+
+.portfolio-label li,
+.portfolio-value li {
+  width: 33.33%;
+  list-style: none;
+}
+
+.portfolio-label li {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #A4A4A4;
+  font-family: variables.$font-primary;
+}
+
+.portfolio-value li {
+  padding-top: 6px;
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 500;
+  color: #fff;
+  font-family: variables.$font-primary;
+}
+
+.portfolio-card01 {
+  background: url('../../assets/images/card01.png') no-repeat center center/100% auto #7f7dc1;
+}
+
+.portfolio-card02 {
+  background: url('../../assets/images/card02.png') no-repeat center center/94% auto #b4b4b4;
+}
+
+.portfolio-card03 {
+  // background: url('../../assets/images/card03.png') no-repeat center center/94% auto #b4b4b4;
+  width: 100%;
+  height: 400px;
+  // object-fit: contain;
+  object-position: center;
+}
+
+.portfolio-card05 {
+  background: url('../../assets/images/card05.png') no-repeat center center/96% auto #e6e38d;
+}
+
+.footer-spacing {
+  padding-top: 100px !important;
+}
+
 @media (max-width: 2560px) {
   .smile-img {
     width: 25px;
   }
 
-  .name_title h2 {
-    padding: 72px 0px 12px 0px;
-    font-size: 48px;
+  .name-title h2 {
+    padding: 140px 0px 12px 0px;
+    font-size: 40px;
+    line-height: 56px;
   }
 
-  .item2 h4,
-  .item3 h4 {
-    font-size: 48px;
-    line-height: 56px;
+  .project-section {
+    padding: 100px 0px 0px 0px !important;
   }
 
   .mail {
@@ -618,24 +791,27 @@ h1.slide-title {
     padding-bottom: 112px !important;
   }
 
-  .passion h2 {
+  .passion-header {
+    font-family: variables.$font-seventh;
     font-size: 56px;
-    line-height: 64px;
-    font-weight: 700;
+    line-height: 72px;
+    font-weight: 500;
     padding-right: 112px;
+    padding-bottom: 0px;
   }
 
-  .project_intro_spacing {
-    padding-top: 120px !important;
+  .project-intro-spacing {
+    padding-top: 100px !important;
+    padding-bottom: 80px !important;
   }
 
   .align-no {
     left: 18%;
   }
 
-  .job_title ul li {
-    font-size: 180px;
-    font-weight: 700;
+  .job-title ul li {
+    font-size: 164px;
+    font-weight: 800;
     line-height: normal;
   }
 
@@ -664,19 +840,19 @@ h1.slide-title {
     width: auto;
   }
 
-  .exp_card_spacing {
-    padding: 64px 0px 0px 0px;
+  .exp-card-spacing {
+    padding: 56px 0px 0px 0px;
   }
 
-  .project_intro h1 {
-    font-size: 88px;
-    line-height: 88px;
-    padding-bottom: 48px;
+  .project-intro h1 {
+    font-size: 56px;
+    line-height: 72px;
+    padding-bottom: 16px;
   }
 
-  .project_intro p {
-    font-size: 28px;
-    line-height: 44px;
+  .project-intro p {
+    font-size: 24px;
+    line-height: 34px;
   }
 
   h1.slide-title {
@@ -688,17 +864,96 @@ h1.slide-title {
     padding-top: 112px !important;
   }
 
+  .item1 h4 {
+    font-size: 32px;
+    line-height: 42px;
+    left: 32px;
+    bottom: 32px;
+  }
+
+  .item2 h4,
+  .item3 h4 {
+    font-size: 40px;
+    line-height: 48px;
+  }
+
   .item4 h4,
   .item5 h4,
   .item6 h4 {
     font-size: 24px;
-    line-height: 32px;
+    line-height: 38px;
   }
 
   .item4-handle,
   .item5-handle,
   .item6-handle {
     width: auto;
+  }
+
+  .portfolio-box01 {
+    margin-bottom: 40px !important;
+    height: 400px;
+  }
+
+  .portfolio-header01-spacing {
+    margin-bottom: 0px !important;
+  }
+
+  .portfolio-card03 {
+    height: 400px;
+  }
+
+  .portfolio-card01 {
+    background: url('../../assets/images/card01.png') no-repeat center center/100% auto #7f7dc1;
+  }
+
+  .portfolio-card02 {
+    background: url('../../assets/images/card02.png') no-repeat center center/94% auto #b4b4b4;
+  }
+
+  .portfolio-card05 {
+    background: url('../../assets/images/card05.png') no-repeat center center/96% auto #e6e38d;
+  }
+
+  .portfolio-content {
+    padding: 48px !important;
+  }
+
+  .portfolio-header h2 {
+    font-size: 32px;
+    line-height: 40px;
+    padding-bottom: 14px;
+  }
+
+  .portfolio-subdetails {
+    bottom: 48px;
+  }
+
+  .portfolio-label li {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .portfolio-value li {
+    padding-top: 6px;
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  .box02-Rspacing {
+    padding-right: 20px !important;
+  }
+
+  .box02-Lspacing {
+    padding-left: 20px !important;
+  }
+
+  .footer-spacing {
+    padding-top: 100px !important;
+  }
+
+  .passion-content {
+    padding-bottom: 48px;
   }
 }
 
@@ -707,22 +962,28 @@ h1.slide-title {
     width: 25px;
   }
 
-  .name_title h2 {
-    padding: 72px 0px 12px 0px;
-    font-size: 48px;
+  .name-title h2 {
+    padding: 140px 0px 12px 0px;
+    font-size: 40px;
+    line-height: 56px;
+  }
+
+  .project-section {
+    padding: 100px 0px 0px 0px !important;
   }
 
   .item2 h4,
   .item3 h4 {
-    font-size: 48px;
-    line-height: 56px;
+    font-size: 40px;
+    line-height: 48px;
   }
 
-  .passion h2 {
+  .passion-header {
     font-size: 56px;
-    line-height: 64px;
-    font-weight: 700;
+    line-height: 72px;
+    font-weight: 500;
     padding-right: 108px;
+    padding-bottom: 0px;
   }
 
   .passion {
@@ -730,8 +991,9 @@ h1.slide-title {
     padding-bottom: 112px !important;
   }
 
-  .project_intro_spacing {
-    padding-top: 120px !important;
+  .project-intro-spacing {
+    padding-top: 100px !important;
+    padding-bottom: 80px !important;
   }
 
   .carousel_spacing {
@@ -748,17 +1010,90 @@ h1.slide-title {
     padding-left: 5px !important;
   }
 
+  .item1 h4 {
+    font-size: 32px;
+    line-height: 38px;
+    left: 32px;
+    bottom: 32px;
+  }
+
   .item4 h4,
   .item5 h4,
   .item6 h4 {
-    font-size: 24px;
-    line-height: 32px;
+    font-size: 26px;
+    line-height: 40px;
   }
 
   .item4-handle,
   .item5-handle,
   .item6-handle {
     width: auto;
+  }
+
+  .portfolio-box01 {
+    margin-bottom: 40px !important;
+    height: 400px;
+  }
+
+  .portfolio-header01-spacing {
+    margin-bottom: 0px !important;
+  }
+
+  .portfolio-card03 {
+    height: 400px;
+  }
+
+  .portfolio-card01 {
+    background: url('../../assets/images/card01.png') no-repeat center center/100% auto #7f7dc1;
+  }
+
+  .portfolio-card02 {
+    background: url('../../assets/images/card02.png') no-repeat center center/94% auto #b4b4b4;
+  }
+
+  .portfolio-card05 {
+    background: url('../../assets/images/card05.png') no-repeat center center/96% auto #e6e38d;
+  }
+
+  .portfolio-content {
+    padding: 48px !important;
+  }
+
+  .portfolio-header h2 {
+    font-size: 32px;
+    line-height: 40px;
+    padding-bottom: 14px;
+  }
+
+  .portfolio-subdetails {
+    bottom: 48px;
+  }
+
+  .portfolio-label li {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .portfolio-value li {
+    padding-top: 6px;
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  .box02-Rspacing {
+    padding-right: 20px !important;
+  }
+
+  .box02-Lspacing {
+    padding-left: 20px !important;
+  }
+
+  .footer-spacing {
+    padding-top: 100px !important;
+  }
+
+  .passion-content {
+    padding-bottom: 48px;
   }
 }
 
@@ -771,9 +1106,14 @@ h1.slide-title {
     padding: 0px !important;
   }
 
-  .name_title h2 {
-    padding: 68px 0px 12px 0px;
-    font-size: 48px;
+  .project-section {
+    padding: 100px 0px 0px 0px !important;
+  }
+
+  .name-title h2 {
+    padding: 100px 0px 12px 0px;
+    font-size: 40px;
+    line-height: 56px;
   }
 
   .item1-space,
@@ -788,11 +1128,11 @@ h1.slide-title {
 
   .item2 h4,
   .item3 h4 {
-    font-size: 48px;
-    line-height: 56px;
+    font-size: 40px;
+    line-height: 48px;
   }
 
-  .name_role_spacing {
+  .name-role-spacing {
     padding-bottom: 88px !important;
   }
 
@@ -800,9 +1140,8 @@ h1.slide-title {
     left: 26%;
   }
 
-  .job_title ul li {
+  .job-title ul li {
     font-size: 150px;
-    font-weight: 700;
     line-height: normal;
   }
 
@@ -822,15 +1161,17 @@ h1.slide-title {
     padding-bottom: 108px !important;
   }
 
-  .passion h2 {
+  .passion-header {
     font-size: 52px;
     line-height: 60px;
-    font-weight: 700;
+    font-weight: 500;
     padding-right: 100px;
+    padding-bottom: 0px;
   }
 
-  .project_intro_spacing {
-    padding-top: 110px !important;
+  .project-intro-spacing {
+    padding-top: 90px !important;
+    padding-bottom: 72px !important;
   }
 
   .experience,
@@ -858,14 +1199,14 @@ h1.slide-title {
     width: auto;
   }
 
-  .exp_card_spacing {
+  .exp-card-spacing {
     padding: 50px 0px 0px 0px;
   }
 
-  .project_intro h1 {
-    font-size: 72px;
+  .project-intro h1 {
+    font-size: 56px;
     line-height: 72px;
-    padding-bottom: 40px;
+    padding-bottom: 24px;
   }
 
   .carousel_spacing {
@@ -907,12 +1248,12 @@ h1.slide-title {
     margin-right: 32px;
   }
 
-  .work_card {
+  .work-card {
     height: 384px;
     // padding: 32px;
   }
 
-  .small_card {
+  .small-card {
     height: 184px;
     // padding: 10px;
   }
@@ -920,6 +1261,72 @@ h1.slide-title {
   .container {
     padding-right: calc(var(--bs-gutter-x) * .5);
     padding-left: calc(var(--bs-gutter-x) * .5);
+  }
+
+  .portfolio-box01 {
+    margin-bottom: 40px !important;
+    height: 400px;
+  }
+
+  .portfolio-header01-spacing {
+    margin-bottom: 0px !important;
+  }
+
+  .portfolio-card03 {
+    height: 400px;
+  }
+
+  .portfolio-card01 {
+    background: url('../../assets/images/card01.png') no-repeat center center/100% auto #7f7dc1;
+  }
+
+  .portfolio-card02 {
+    background: url('../../assets/images/card02.png') no-repeat center center/94% auto #b4b4b4;
+  }
+
+  .portfolio-card05 {
+    background: url('../../assets/images/card05.png') no-repeat center center/96% auto #e6e38d;
+  }
+
+  .portfolio-content {
+    padding: 48px !important;
+  }
+
+  .portfolio-header h2 {
+    font-size: 32px;
+    line-height: 40px;
+    padding-bottom: 14px;
+  }
+
+  .portfolio-subdetails {
+    bottom: 48px;
+  }
+
+  .portfolio-label li {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .portfolio-value li {
+    padding-top: 6px;
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  .box02-Rspacing {
+    padding-right: 20px !important;
+  }
+
+  .box02-Lspacing {
+    padding-left: 20px !important;
+  }
+
+  .footer-spacing {
+    padding-top: 100px !important;
+  }
+
+  .passion-content {
+    padding-bottom: 48px;
   }
 }
 
@@ -932,9 +1339,14 @@ h1.slide-title {
     padding: 0px !important;
   }
 
-  .name_title h2 {
-    padding: 64px 0px 12px 0px;
-    font-size: 48px;
+  .project-section {
+    padding: 80px 0px 0px 0px !important;
+  }
+
+  .name-title h2 {
+    padding: 100px 0px 12px 0px;
+    font-size: 28px;
+    line-height: 40px;
   }
 
   .passion {
@@ -942,15 +1354,17 @@ h1.slide-title {
     padding-bottom: 72px !important;
   }
 
-  .passion h2 {
-    font-size: 48px;
-    line-height: 56px;
-    font-weight: 700;
+  .passion-header {
+    font-size: 36px;
+    line-height: 48px;
+    font-weight: 500;
     padding-right: 72px;
+    padding-bottom: 0px;
   }
 
-  .project_intro_spacing {
-    padding-top: 88px !important;
+  .project-intro-spacing {
+    padding-top: 68px !important;
+    padding-bottom: 68px !important;
   }
 
   .carousel_spacing {
@@ -967,29 +1381,13 @@ h1.slide-title {
     padding-left: 5px !important;
   }
 
-  // .item3 {
-  //   background: url('../../assets/images/card-03.png') no-repeat center center/120% auto #E27F7F;
-  // }
-
-  // .item4 {
-  //   background: url('../../assets/images/card-04.png') no-repeat center center/110% auto #DCDE81;
-  // }
-
-  // .item5 {
-  //   background: url('../../assets/images/card-05.png') no-repeat center center/100% auto #90A7EB;
-  // }
-
-  // .item6 {
-  //   background: url('../../assets/images/card-06.png') no-repeat center center/100% auto #fff;
-  // }
-
   .item2 h4,
   .item3 h4 {
-    font-size: 48px;
-    line-height: 56px;
+    font-size: 40px;
+    line-height: 48px;
   }
 
-  .work_card {
+  .work-card {
     height: 340px;
     // padding: 32px;
   }
@@ -999,13 +1397,13 @@ h1.slide-title {
     left: 32px;
   }
 
-  .work_card.item1 .card-01 {
+  .work-card.item1 .card-01 {
     width: 100%;
     height: 100%;
     object-fit: contain;
   }
 
-  .small_card {
+  .small-card {
     height: 163px;
     // padding: 12px;
   }
@@ -1050,23 +1448,23 @@ h1.slide-title {
     width: auto;
   }
 
-  .name_role_spacing {
-    padding-bottom: 32px !important;
+  .name-role-spacing {
+    padding-bottom: 16px !important;
   }
 
-  .exp_card_spacing {
-    padding: 40px 0px 0px 0px;
+  .exp-card-spacing {
+    padding: 52px 0px 0px 0px;
   }
 
-  .project_intro h1 {
-    font-size: 60px;
-    line-height: 60px;
-    padding-bottom: 30px;
+  .project-intro h1 {
+    font-size: 54px;
+    line-height: 68px;
+    padding-bottom: 22px;
   }
 
-  .project_intro p {
+  .project-intro p {
     font-size: 24px;
-    line-height: 32px;
+    line-height: 34px;
   }
 
   h1.slide-title {
@@ -1087,15 +1485,14 @@ h1.slide-title {
     padding-right: 5.5rem;
   }
 
-  .job_title ul li {
-    font-size: 134px;
-    font-weight: 700;
+  .job-title ul li {
+    font-size: 140px;
     line-height: normal;
   }
 
   .item1 h4 {
-    font-size: 32px;
-    line-height: 36px;
+    font-size: 28px;
+    line-height: 40px;
     left: 24px;
     bottom: 24px;
   }
@@ -1110,7 +1507,7 @@ h1.slide-title {
   .item4 h4,
   .item5 h4,
   .item6 h4 {
-    font-size: 20px;
+    font-size: 24px;
     line-height: 28px;
   }
 
@@ -1146,6 +1543,72 @@ h1.slide-title {
     padding-right: calc(var(--bs-gutter-x) * 1.5);
     padding-left: calc(var(--bs-gutter-x) * 1.5);
   }
+
+  .portfolio-box01 {
+    margin-bottom: 40px !important;
+    height: 312px;
+  }
+
+  .portfolio-header01-spacing {
+    margin-bottom: 0px !important;
+  }
+
+  .portfolio-card03 {
+    height: 300px;
+  }
+
+  .portfolio-card01 {
+    background: url('../../assets/images/card01.png') no-repeat center center/100% auto #7f7dc1;
+  }
+
+  .portfolio-card02 {
+    background: url('../../assets/images/card02.png') no-repeat center center/94% auto #b4b4b4;
+  }
+
+  .portfolio-card05 {
+    background: url('../../assets/images/card05.png') no-repeat center center/96% auto #e6e38d;
+  }
+
+  .portfolio-content {
+    padding: 48px !important;
+  }
+
+  .portfolio-header h2 {
+    font-size: 32px;
+    line-height: 40px;
+    padding-bottom: 14px;
+  }
+
+  .portfolio-subdetails {
+    bottom: 48px;
+  }
+
+  .portfolio-label li {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .portfolio-value li {
+    padding-top: 6px;
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  .box02-Rspacing {
+    padding-right: 20px !important;
+  }
+
+  .box02-Lspacing {
+    padding-left: 20px !important;
+  }
+
+  .footer-spacing {
+    padding-top: 100px !important;
+  }
+
+  .passion-content {
+    padding-bottom: 48px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -1157,17 +1620,22 @@ h1.slide-title {
     padding: 0px !important;
   }
 
-  .name_title h2 {
-    padding: 64px 0px 12px 0px;
-    font-size: 48px;
+  .project-section {
+    padding: 64px 0px 0px 0px !important;
   }
 
-  .work_card {
+  .name-title h2 {
+    padding: 100px 0px 12px 0px;
+    font-size: 40px;
+    line-height: 56px;
+  }
+
+  .work-card {
     height: 240px;
     // padding: 12px;
   }
 
-  .small_card {
+  .small-card {
     height: 113px;
     // padding: 12px;
   }
@@ -1195,13 +1663,13 @@ h1.slide-title {
     padding-left: 5px !important;
   }
 
-  .work_card.item2 .card-02 {
+  .work-card.item2 .card-02 {
     width: 100%;
     height: 100%;
     object-fit: cover;
   }
 
-  .work_card.item4 .card-04 {
+  .work-card.item4 .card-04 {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -1218,7 +1686,7 @@ h1.slide-title {
   .item4-handle,
   .item5-handle,
   .item6-handle {
-    width: 32px;
+    width: 28px;
   }
 
   .item1-handle,
@@ -1248,9 +1716,8 @@ h1.slide-title {
     left: 35%;
   }
 
-  .job_title ul li {
-    font-size: 134px;
-    font-weight: 700;
+  .job-title ul li {
+    font-size: 120px;
     line-height: normal;
   }
 
@@ -1290,37 +1757,39 @@ h1.slide-title {
     width: 24px;
   }
 
-  .exp_card_spacing {
+  .exp-card-spacing {
     padding: 50px 0px 0px 0px;
   }
 
-  .name_role_spacing {
-    padding-bottom: 16px !important;
+  .name-role-spacing {
+    padding-bottom: 0px !important;
   }
 
-  .project_intro_spacing {
-    padding-top: 88px !important;
+  .project-intro-spacing {
+    padding-top: 68px !important;
+    padding-bottom: 68px !important;
   }
 
   .carousel_spacing {
     padding-top: 64px !important;
   }
 
-  .project_intro h1 {
-    font-size: 40px;
-    line-height: 40px;
-    padding-bottom: 20px;
+  .project-intro h1 {
+    font-size: 48px;
+    line-height: 52px;
+    padding-bottom: 22px;
   }
 
-  .project_intro p {
+  .project-intro p {
     font-size: 20px;
     line-height: 28px;
   }
 
-  .passion h2 {
-    font-size: 40px;
-    line-height: 48px;
+  .passion-header {
+    font-size: 32px;
+    line-height: 44px;
     padding-right: 0px;
+    padding-bottom: 0px;
   }
 
   h1.slide-title {
@@ -1346,7 +1815,7 @@ h1.slide-title {
 
   .passion {
     padding-top: 64px !important;
-    padding-bottom: 72px !important;
+    padding-bottom: 56px !important;
   }
 
   .subheading-pading {
@@ -1379,12 +1848,88 @@ h1.slide-title {
     padding-right: calc(var(--bs-gutter-x) * 1.5);
     padding-left: calc(var(--bs-gutter-x) * 1.5);
   }
+
+  .name-title h2 {
+    padding: 100px 0px 12px 0px;
+    font-size: 26px;
+    line-height: 40px;
+  }
+
+  .portfolio-box01 {
+    margin-bottom: 40px !important;
+    height: 240px;
+  }
+
+  .portfolio-header01-spacing {
+    margin-bottom: 0px !important;
+  }
+
+  .portfolio-card03 {
+    height: 240px;
+  }
+
+  .portfolio-card01 {
+    background: url('../../assets/images/card01.png') no-repeat center center/100% auto #7f7dc1;
+  }
+
+  .portfolio-card02 {
+    background: url('../../assets/images/card02.png') no-repeat center center/94% auto #b4b4b4;
+  }
+
+  .portfolio-card05 {
+    background: url('../../assets/images/card05.png') no-repeat center center/96% auto #e6e38d;
+  }
+
+  .portfolio-content {
+    padding: 24px !important;
+  }
+
+  .portfolio-header h2 {
+    font-size: 24px;
+    line-height: 32px;
+    padding-bottom: 10px;
+  }
+
+  .portfolio-subdetails {
+    bottom: 24px;
+  }
+
+  .portfolio-label li {
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  .portfolio-value li {
+    padding-top: 0px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .box02-Rspacing {
+    padding-right: 20px !important;
+  }
+
+  .box02-Lspacing {
+    padding-left: 20px !important;
+  }
+
+  .footer-spacing {
+    padding-top: 100px !important;
+  }
+
+  .passion-content {
+    padding-bottom: 48px;
+  }
 }
 
 @media (max-width: 576px) {
   .mail {
     width: 100%;
     font-size: 16px;
+  }
+
+  .project-section {
+    padding: 56px 0px 0px 0px !important;
   }
 
   .smile-img {
@@ -1399,24 +1944,24 @@ h1.slide-title {
     padding-top: 12px !important;
   }
 
-  .job_title ul li {
+  .job-title ul li {
     font-size: 112px;
     line-height: 86px;
   }
 
-  .exp_card_spacing {
+  .exp-card-spacing {
     padding: 0px 0px 0px 0px;
   }
 
-  .name_role_spacing {
+  .name-role-spacing {
     padding-bottom: 48px !important;
   }
 
-  .work_card {
+  .work-card {
     height: 320px;
   }
 
-  .small_card {
+  .small-card {
     height: 240px;
     // padding: 24px;
   }
@@ -1464,25 +2009,17 @@ h1.slide-title {
     width: auto;
   }
 
-  .work_card.item2 .card-02 {
+  .work-card.item2 .card-02 {
     width: 100%;
     height: 100%;
     object-fit: contain;
   }
 
-  .work_card.item4 .card-04 {
+  .work-card.item4 .card-04 {
     width: 100%;
     height: 100%;
     object-fit: contain;
   }
-
-  // .item3 {
-  //   background: url('../../assets/images/card-03.png') no-repeat center center/110% auto #E27F7F;
-  // }
-
-  // .item4 {
-  //   background: url('../../assets/images/card-04.png') no-repeat center center/60% auto #DCDE81;
-  // }
 }
 
 @media (max-width: 430px) {
@@ -1490,9 +2027,14 @@ h1.slide-title {
     width: 20px;
   }
 
-  .name_title h2 {
-    padding: 48px 0px 12px 0px;
-    font-size: 32px;
+  .name-title h2 {
+    padding: 56px 0px 12px 0px;
+    font-size: 20px;
+    line-height: 32px;
+  }
+
+  .project-section {
+    padding: 16px 0px 0px 0px !important;
   }
 
   .mail {
@@ -1506,22 +2048,22 @@ h1.slide-title {
     padding-top: 8px;
   }
 
-  .name_role_spacing {
-    padding-bottom: 48px !important;
+  .name-role-spacing {
+    padding-bottom: 26px !important;
   }
 
-  .job_title ul li {
-    font-size: 112px;
+  .job-title ul li {
+    font-size: 104px;
     line-height: 86px;
   }
 
-  .exp_card_spacing {
-    padding: 0px 0px 0px 0px;
+  .exp-card-spacing {
+    padding: 26px 0px 0px 0px;
   }
 
   .item1 h4 {
-    font-size: 32px;
-    line-height: 32px;
+    font-size: 28px;
+    line-height: 38px;
     left: 24px;
     bottom: 24px;
   }
@@ -1531,23 +2073,15 @@ h1.slide-title {
   .item4 h4,
   .item5 h4,
   .item6 h4 {
-    font-size: 32px;
+    font-size: 28px;
     line-height: 40px;
   }
 
-  // .item3 {
-  //   background: url('../../assets/images/card-03.png') no-repeat center center/110% auto #E27F7F;
-  // }
-
-  // .item4 {
-  //   background: url('../../assets/images/card-04.png') no-repeat center center/92% auto #DCDE81;
-  // }
-
-  .work_card {
+  .work-card {
     height: 320px;
   }
 
-  .small_card {
+  .small-card {
     height: 240px;
     // padding: 24px;
   }
@@ -1582,19 +2116,19 @@ h1.slide-title {
     width: auto;
   }
 
-  .work_card.item1 .card-01 {
+  .work-card.item1 .card-01 {
     width: 100%;
     height: 100%;
     object-fit: contain;
   }
 
-  .work_card.item3 .card-03 {
+  .work-card.item3 .card-03 {
     width: 100%;
     height: 100%;
     object-fit: cover;
   }
 
-  .work_card.item4 .card-04 {
+  .work-card.item4 .card-04 {
     width: 100%;
     height: 100%;
     object-fit: contain;
@@ -1602,11 +2136,12 @@ h1.slide-title {
 
   .passion {
     padding-top: 16px !important;
-    padding-bottom: 64px !important;
+    padding-bottom: 8px !important;
   }
 
-  .project_intro_spacing {
-    padding-top: 64px !important;
+  .project-intro-spacing {
+    padding-top: 56px !important;
+    padding-bottom: 56px !important;
   }
 
   .carousel_spacing {
@@ -1668,10 +2203,61 @@ h1.slide-title {
   .subinfo-spacing {
     padding-bottom: 6px;
   }
+
+  .passion-header {
+    font-size: 28px;
+    line-height: 40px;
+    padding-right: 0px;
+    padding-bottom: 32px;
+  }
+
+  .portfolio-box01 {
+    margin-bottom: 40px !important;
+    height: auto;
+    // overflow: hidden;
+  }
+
+  .portfolio-card03,
+  .portfolio-card01,
+  .portfolio-card02,
+  .portfolio-card05 {
+    height: 240px;
+  }
+
+  .portfolio-header01-spacing {
+    margin-bottom: 78px !important;
+  }
+
+  .box02-Rspacing {
+    padding-right: 0px !important;
+  }
+
+  .box02-Lspacing {
+    padding-left: 0px !important;
+  }
+
+  .footer-spacing {
+    padding-top: 72px !important;
+  }
+
+  .passion-content {
+    padding-bottom: 44px;
+  }
+
+  .project-intro h1 {
+    font-size: 42px;
+    line-height: 52px;
+    padding-bottom: 22px;
+  }
+
+  .project-intro p {
+    font-size: 18px;
+    line-height: 28px;
+  }
 }
 
 @media (max-width: 380px) {
-  .work_card.item3 .card-03 {
+  .work-card.item3 .card-03 {
     width: 100%;
     height: 88%;
     object-fit: cover;
@@ -1687,20 +2273,24 @@ h1.slide-title {
     font-size: 13px;
   }
 
+  .project-section {
+    padding: 32px 0px 0px 0px !important;
+  }
+
   .subinfo-spacing {
     padding-bottom: 4px;
   }
 
-  .work_card {
+  .work-card {
     height: 284px;
   }
 
   .passion {
     padding-top: 16px !important;
-    padding-bottom: 50px !important;
+    padding-bottom: 32px !important;
   }
 
-  .name_role_spacing {
+  .name-role-spacing {
     padding-bottom: 32px !important;
   }
 
@@ -1709,8 +2299,8 @@ h1.slide-title {
   }
 
   .item1 h4 {
-    font-size: 32px;
-    line-height: 32px;
+    font-size: 28px;
+    line-height: 56px;
     left: 16px;
     bottom: 16px;
   }
@@ -1720,34 +2310,85 @@ h1.slide-title {
   .item4 h4,
   .item5 h4,
   .item6 h4 {
-    font-size: 32px;
+    font-size: 28px;
     line-height: 40px;
   }
 
-  .work_card.item3 .card-03 {
+  .work-card.item3 .card-03 {
     width: 100%;
     height: 100%;
     object-fit: contain;
   }
+
+  .name-title h2 {
+    padding: 56px 0px 12px 0px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .job-title ul li {
+    font-size: 92px;
+    line-height: 86px;
+  }
+
+  .passion-content {
+    padding-bottom: 32px;
+  }
+
+  .portfolio-card03,
+  .portfolio-card01,
+  .portfolio-card02,
+  .portfolio-card05 {
+    height: 222px;
+  }
+
+  .footer-spacing {
+    padding-top: 48px !important;
+  }
+
+  .project-intro h1 {
+    font-size: 42px;
+    line-height: 52px;
+    padding-bottom: 22px;
+  }
+
+  .project-intro p {
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  .portfolio-label li {
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  .portfolio-value li {
+    padding-top: 0px;
+    font-size: 16px;
+    line-height: 24px;
+  }
 }
 
 @media (max-width: 325px) {
-
   .smile-img {
     width: 20px;
+  }
+
+  .project-section {
+    padding: 56px 0px 0px 0px !important;
   }
 
   .swiper-slide {
     width: 290px;
   }
 
-  .work_card {
+  .work-card {
     height: 250px;
   }
 
   .item1 h4 {
     font-size: 28px;
-    line-height: 32px;
+    line-height: 54px;
     left: 16px;
     bottom: 16px;
   }
@@ -1759,6 +2400,17 @@ h1.slide-title {
   .item6 h4 {
     font-size: 28px;
     line-height: 32px;
+  }
+
+  .portfolio-label li {
+    font-size: 12px;
+    line-height: 24px;
+  }
+
+  .portfolio-value li {
+    padding-top: 0px;
+    font-size: 14px;
+    line-height: 24px;
   }
 }
 

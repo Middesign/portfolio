@@ -2,7 +2,11 @@
 
 .contact-border {
     border: 1px solid #999999;
-    border-radius: 48px;
+    // border-radius: 48px;
+}
+
+a:hover {
+    color: #fff;
 }
 
 .contact-border img {
@@ -10,11 +14,13 @@
     width: auto;
 }
 
-h1.contact_info {
-    font-size: 88px;
-    line-height: 88px;
+h1.contact-info {
+    font-size: 72px;
+    line-height: 80px;
     padding: 88px 0px 48px 0px;
     color: #fff;
+    font-weight: 400;
+    font-family: variables.$font-primary;
 }
 
 .freelance-space {
@@ -43,7 +49,7 @@ h1.contact_info {
 
 .col-stripes span {
     font-size: 88px;
-    font-family: variables.$font-tertiary;
+    font-family: variables.$font-primary;
 }
 
 .col-stripes .work-text {
@@ -75,7 +81,7 @@ h1.contact_info {
 
 .footer {
     color: #fff;
-    padding: 20px 0px 20px 0px;
+    padding: 20px 0px 80px 0px;
 }
 
 .footerlinks-primary {
@@ -134,9 +140,9 @@ h1.contact_info {
         width: auto;
     }
 
-    h1.contact_info {
-        font-size: 88px;
-        line-height: 88px;
+    h1.contact-info {
+        font-size: 72px;
+        line-height: 80px;
         padding: 88px 0px 48px 0px;
     }
 
@@ -183,9 +189,9 @@ h1.contact_info {
         width: auto;
     }
 
-    h1.contact_info {
+    h1.contact-info {
         font-size: 72px;
-        line-height: 72px;
+        line-height: 80px;
         padding: 88px 0px 40px 0px;
     }
 
@@ -221,9 +227,9 @@ h1.contact_info {
         width: auto;
     }
 
-    h1.contact_info {
+    h1.contact-info {
         font-size: 60px;
-        line-height: 60px;
+        line-height: 72px;
         padding: 88px 0px 30px 0px;
     }
 
@@ -264,10 +270,10 @@ h1.contact_info {
     }
 
     .contact-border {
-        border-radius: 48px;
+        border-radius: 0px;
     }
 
-    h1.contact_info {
+    h1.contact-info {
         font-size: 40px;
         line-height: 40px;
         padding: 56px 0px 20px 0px;
@@ -351,7 +357,7 @@ h1.contact_info {
     }
 
     .contact-border {
-        border-radius: 48px;
+        border-radius: 0px;
     }
 
     .freelance-space {
@@ -398,10 +404,10 @@ h1.contact_info {
 
 @media (max-width: 362px) {
     .contact-border {
-        border-radius: 24px;
+        border-radius: 0px;
     }
 
-    h1.contact_info {
+    h1.contact-info {
         font-size: 40px;
         line-height: 40px;
         padding: 32px 0px 20px 0px;

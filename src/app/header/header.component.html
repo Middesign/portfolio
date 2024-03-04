@@ -3,11 +3,11 @@
     [ngClass]="isBlackBg == true ? 'darkBg' : 'whiteBg'">
     <img *ngIf="!isBlackBg" class="logo-icon cursor-pointer" src="assets/images/Mylogo.svg" alt="Me"
         (click)="navigateToHome()">
-    <img *ngIf="isBlackBg" class="white-svg cursor-pointer" src="assets/images/Mylogo-yellow.svg" alt="Me"
+    <img *ngIf="isBlackBg" class="white-svg cursor-pointer" src="assets/images/Mylogo-white.svg" alt="Me"
         (click)="navigateToHome()">
     <ul class="d-flex flex-row navbar-nav m-auto">
         <li class="nav-item">
-            <a (click)="navigateToUnderConstruction()" class="cursor-pointer nav-link link-items"
+            <a (click)="navigateToPortfolio()" class="cursor-pointer nav-link link-items"
                 [ngClass]="isBlackBg == true ? 'darkText' : 'whiteText'" aria-current="page">
                 Portfolio
             </a>
@@ -16,7 +16,8 @@
             <a (click)="navigateToAboutMe()" class="cursor-pointer nav-link link-items">About me</a>
         </li>
         <li class="nav-item">
-            <a (click)="navigateToAboutMe()" class="cursor-pointer nav-link link-items">Resume</a>
+            <a (click)="downloadResume()" (mouseover)="changeText()" (mouseout)="resetText()"
+                class="cursor-pointer nav-link link-items">{{linkText}}</a>
         </li>
     </ul>
     <div class="sticky-wrapper">
@@ -26,7 +27,7 @@
 </div>
 <!-- Mobile View -->
 <div *ngIf="isMobileView" class="d-flex justify-content-between">
-    <img [ngClass]="isBlackBg == true ? 'whiteIcon' : 'darkIcon'" src="assets/images/More-icon.svg" alt="Me"
+    <img [ngClass]="isBlackBg == true ? 'whiteIcon' : 'darkIcon'" src="assets/images/More.svg" alt="Me"
         (click)="fnCollapseClick()">
     <div class="sticky-wrapper">
         <img class="hire-button" [src]="hireMe" alt="Hire Me" (mouseenter)="changeInHireme(true)"
@@ -34,12 +35,14 @@
     </div>
 </div>
 <div id="myNav" class="overlay">
-    <img class="closebtn" src="assets/images/close-icon.svg" alt="Me" (click)="closeNav()">
+    <img class="closebtn" src="assets/images/Close.svg" alt="Me" (click)="closeNav()">
     <div class="overlay-content">
-        <img class="logo-img cursor-pointer" src="assets/images/Mylogo-yellow.svg" alt="Me"
+        <img class="logo-img cursor-pointer" src="assets/images/Mylogo-white.svg" alt="Me"
             (click)="navigateToHome();closeNav()">
-        <a (click)="navigateToUnderConstruction();closeNav()">Selected works</a>
-        <hr>
+        <!-- <a (click)="navigateToPortfolio();closeNav()">Portfolio</a> -->
+        <!-- <hr> -->
         <a (click)="navigateToAboutMe();closeNav()">About me</a>
+        <hr>
+        <a (click)="downloadResume()" (mouseover)="changeText()" (mouseout)="resetText()">{{linkText}}</a>
     </div>
 </div>

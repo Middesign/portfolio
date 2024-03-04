@@ -1,5 +1,6 @@
 import { Component, HostListener, Input, OnInit } from '@angular/core';
 import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
+import { GenerictemplateService } from '../generictemplate.service';
 declare var document: any;
 
 @Component({
@@ -8,12 +9,17 @@ declare var document: any;
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
-  constructor(private router: Router, private route: ActivatedRoute) {
+  constructor(
+    private router: Router,
+    private route: ActivatedRoute,
+    private genericService: GenerictemplateService
+  ) {
     this.checkScreenSize();
   }
   @Input() isBlackBg = false;
   hireMe = 'assets/images/Hire-me-default.svg';
   isMobileView: boolean | undefined;
+  linkText = 'Resume';
 
   @HostListener('window:resize', ['$event'])
   checkScreenSize() {
@@ -48,6 +54,32 @@ export class HeaderComponent implements OnInit {
   }
   navigateToHome() {
     this.router.navigate(['/home']);
+  }
+  changeText() {
+    this.linkText = 'Download';
+  }
+  navigateToPortfolio() {
+    if (this.isBlackBg == true) {
+      this.router.navigate(['/home']);
+    }
+    this.genericService.portfolioScoll.next(true);
+  }
+  downloadResume() {
+    if (this.linkText.toLowerCase() === 'download') {
+      const resumeurl = 'assets/files/Midhun Vijayan_Resume 2024.pdf';
+      const link = document.createElement('a');
+
+      link.setAttribute('target', '_blank');
+      link.setAttribute('href', resumeurl);
+      link.setAttribute('download', 'Midhun Vijayan_Resume.pdf');
+      link.style.display = 'none';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
+  }
+  resetText() {
+    this.linkText = 'Resume';
   }
   changeInHireme(onHover: boolean) {
     if (onHover) {

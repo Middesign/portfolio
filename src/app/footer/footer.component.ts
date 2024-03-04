@@ -7,39 +7,41 @@ declare var $: any;
   selector: 'app-footer',
   templateUrl: './footer.component.html',
   styleUrls: ['./footer.component.scss'],
-  animations: [
-    trigger('scrollAnimation', [
-      transition(':enter', [
-        style({ transform: 'translateY(100%)' }),
-        animate('300ms', style({ transform: 'translateY(0)' })),
-      ]),
-      transition(':leave', [
-        style({ transform: 'translateY(0)' }),
-        animate('300ms', style({ transform: 'translateY(100%)' })),
-      ]),
-    ]),
-  ],
+  // animations: [
+  //   trigger('scrollAnimation', [
+  //     transition(':enter', [
+  //       style({ transform: 'translateY(100%)' }),
+  //       animate('300ms', style({ transform: 'translateY(0)' })),
+  //     ]),
+  //     transition(':leave', [
+  //       style({ transform: 'translateY(0)' }),
+  //       animate('300ms', style({ transform: 'translateY(100%)' })),
+  //     ]),
+  //   ]),
+  // ],
 })
 export class FooterComponent implements OnInit {
   constructor() {}
   @Input() showFreelance = true;
-  hideProfile = false;
+  hideBacktoTop = false;
   imageSource = 'assets/images/Write-msg-01.svg';
 
   @HostListener('window:resize', ['$event'])
   checkScreenSize() {
     if (window.innerWidth < 430 || window.innerWidth == 430) {
-      this.hideProfile = false;
+      this.hideBacktoTop = false;
     } else if (window.innerWidth < 780 || window.innerWidth == 780) {
-      this.hideProfile = true;
+      this.hideBacktoTop = true;
     } else if (window.innerWidth < 1024 || window.innerWidth == 1024) {
-      this.hideProfile = false;
+      this.hideBacktoTop = false;
     } else {
-      this.hideProfile = false;
+      this.hideBacktoTop = false;
     }
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.checkScreenSize();
+  }
 
   changeImage(onHover: boolean) {
     if (onHover) {
@@ -51,12 +53,22 @@ export class FooterComponent implements OnInit {
   openMail() {
     window.location.href = 'mailto:midhunvijayan078@gmail.com';
   }
+  // scrollToTop() {
+  //   $(document).ready(function () {
+  //     $('.SmoothmyTop').click(function () {
+  //       $('html, body').animate({ scrollTop: 0 }, 10000);
+  //       return false;
+  //     });
+  //   });
+  // }
   scrollToTop() {
-    $(document).ready(function () {
-      $('.SmoothmyTop').click(function () {
-        $('html, body').animate({ scrollTop: 0 }, 10000);
-        return false;
-      });
-    });
+    (function smoothscroll() {
+      var currentScroll =
+        document.documentElement.scrollTop || document.body.scrollTop;
+      if (currentScroll > 0) {
+        window.requestAnimationFrame(smoothscroll);
+        window.scrollTo(0, currentScroll - currentScroll / 24);
+      }
+    })();
   }
 }

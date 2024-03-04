@@ -10,6 +10,7 @@ import { GenerictemplateService } from '../generictemplate.service';
 import { style, transition, trigger, animate } from '@angular/animations';
 import { SwiperOptions } from 'swiper/types/swiper-options';
 import { Router } from '@angular/router';
+import { ViewportScroller } from '@angular/common';
 
 declare var $: any;
 
@@ -17,24 +18,25 @@ declare var $: any;
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.scss'],
-  animations: [
-    trigger('scrollAnimation', [
-      transition(':enter', [
-        style({ transform: 'translateY(100%)' }),
-        animate('300ms', style({ transform: 'translateY(0)' })),
-      ]),
-      transition(':leave', [
-        style({ transform: 'translateY(0)' }),
-        animate('300ms', style({ transform: 'translateY(100%)' })),
-      ]),
-    ]),
-  ],
+  // animations: [
+  //   trigger('scrollAnimation', [
+  //     transition(':enter', [
+  //       style({ transform: 'translateY(100%)' }),
+  //       animate('300ms', style({ transform: 'translateY(0)' })),
+  //     ]),
+  //     transition(':leave', [
+  //       style({ transform: 'translateY(0)' }),
+  //       animate('300ms', style({ transform: 'translateY(100%)' })),
+  //     ]),
+  //   ]),
+  // ],
 })
 export class DashboardComponent implements OnInit {
   constructor(
     private genericService: GenerictemplateService,
     private el: ElementRef,
-    private router: Router
+    private router: Router,
+    private scroller: ViewportScroller
   ) {
     this.checkScreenSize();
   }
@@ -43,7 +45,7 @@ export class DashboardComponent implements OnInit {
   expCount: number = 0;
   projectCount: number = 0;
   targetNumber1: number = 10;
-  targetNumber2: number = 30;
+  targetNumber2: number = 50;
   duration: number = 2000;
   customOptions: OwlOptions = {
     loop: false,
@@ -97,6 +99,7 @@ export class DashboardComponent implements OnInit {
   hideProfile = false;
   isMobileView = false;
   slidesStore: any;
+  expertise: any;
   imageSource = 'assets/images/Write-msg-01.svg';
   hireMe = 'assets/images/Hire-me-default.svg';
 
@@ -120,22 +123,35 @@ export class DashboardComponent implements OnInit {
   ngOnInit() {
     this.startAnimation();
     this.gerCarouselDetails();
-    $(document).ready(function () {
-      $('.SmoothmyTop').click(function () {
-        $('html, body').animate({ scrollTop: 0 }, 1400);
-        return false;
-      });
+    this.getProfessionalExpertise();
+    this.genericService.portfolioScoll$.subscribe((isScroll) => {
+      if (isScroll) {
+        this.scroller.scrollToAnchor('portfolio');
+        // document
+        //   .getElementById('portfolio')
+        //   ?.scrollIntoView({
+        //     behavior: 'smooth',
+        //     block: 'start',
+        //     inline: 'nearest',
+        //   });
+      }
     });
   }
 
   gerCarouselDetails() {
-    this.genericService.getCarouselJson().subscribe((data) => {
+    this.genericService.commonGetJSON('carousel').subscribe((data) => {
       if (data != undefined && data != null) {
         this.slidesStore = data;
       }
     });
   }
-
+  getProfessionalExpertise() {
+    this.genericService.commonGetJSON('expertise').subscribe((data) => {
+      if (data != undefined && data != null) {
+        this.expertise = data;
+      }
+    });
+  }
   startAnimation() {
     const startTime = performance.now();
     const updateNumber = () => {
@@ -149,15 +165,6 @@ export class DashboardComponent implements OnInit {
     };
 
     requestAnimationFrame(updateNumber);
-  }
-
-  scrollToTop() {
-    $(document).ready(function () {
-      $('.SmoothmyTop').click(function () {
-        $('html, body').animate({ scrollTop: 0 }, 10000);
-        return false;
-      });
-    });
   }
   changeImage(onHover: boolean) {
     if (onHover) {
