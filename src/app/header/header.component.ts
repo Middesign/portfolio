@@ -1,6 +1,7 @@
 import { Component, HostListener, Input, OnInit } from '@angular/core';
 import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 import { GenerictemplateService } from '../generictemplate.service';
+import { ViewportScroller } from '@angular/common';
 declare var document: any;
 
 @Component({
@@ -12,7 +13,8 @@ export class HeaderComponent implements OnInit {
   constructor(
     private router: Router,
     private route: ActivatedRoute,
-    private genericService: GenerictemplateService
+    private genericService: GenerictemplateService,
+    private scroller: ViewportScroller
   ) {
     this.checkScreenSize();
   }
@@ -23,7 +25,7 @@ export class HeaderComponent implements OnInit {
 
   @HostListener('window:resize', ['$event'])
   checkScreenSize() {
-    this.isMobileView = window.innerWidth <= 496;
+    this.isMobileView = window.innerWidth <= 649;
   }
   ngOnInit(): void {
     // this.router.events.subscribe((event) => {
@@ -36,6 +38,16 @@ export class HeaderComponent implements OnInit {
     //     }
     //   }
     // });
+    this.genericService.scrollToTop$.subscribe((isScroll) => {
+      if (isScroll) {
+        this.scroller.scrollToAnchor('header');
+        // document.getElementById('header')?.scrollIntoView({
+        //   behavior: 'smooth',
+        //   block: 'start',
+        //   inline: 'nearest',
+        // });
+      }
+    });
   }
   fnCollapseClick() {
     document.getElementById('myNav').style.height = '100%';

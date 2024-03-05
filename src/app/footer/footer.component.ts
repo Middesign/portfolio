@@ -1,5 +1,12 @@
 import { animate, style, transition, trigger } from '@angular/animations';
-import { Component, HostListener, Input, OnInit } from '@angular/core';
+import {
+  Component,
+  EventEmitter,
+  HostListener,
+  Input,
+  OnInit,
+  Output,
+} from '@angular/core';
 
 declare var $: any;
 
@@ -23,6 +30,7 @@ declare var $: any;
 export class FooterComponent implements OnInit {
   constructor() {}
   @Input() showFreelance = true;
+  @Output() scrolltotop = new EventEmitter<string>();
   hideBacktoTop = false;
   imageSource = 'assets/images/Write-msg-01.svg';
 
@@ -61,14 +69,4 @@ export class FooterComponent implements OnInit {
   //     });
   //   });
   // }
-  scrollToTop() {
-    (function smoothscroll() {
-      var currentScroll =
-        document.documentElement.scrollTop || document.body.scrollTop;
-      if (currentScroll > 0) {
-        window.requestAnimationFrame(smoothscroll);
-        window.scrollTo(0, currentScroll - currentScroll / 24);
-      }
-    })();
-  }
 }

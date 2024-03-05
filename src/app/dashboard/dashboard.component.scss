@@ -2022,6 +2022,68 @@ h1.slide-title {
   }
 }
 
+@media (max-width: 550px) {
+  .name-title h2 {
+    padding: 72px 0px 12px 0px;
+    font-size: 26px;
+    line-height: 40px;
+  }
+
+  .exp-card-spacing {
+    padding: 24px 0px 0px 0px;
+  }
+
+  .project-section {
+    padding: 24px 0px 0px 0px !important;
+  }
+
+  .passion {
+    padding-top: 20px !important;
+    padding-bottom: 32px !important;
+  }
+
+  .passion-header {
+    font-size: 32px;
+    line-height: 44px;
+    padding-right: 0px;
+    padding-bottom: 24px;
+  }
+
+  .passion-content {
+    padding-bottom: 36px;
+  }
+
+  .portfolio-box01 {
+    margin-bottom: 40px !important;
+    height: auto;
+    // overflow: hidden;
+  }
+
+  .portfolio-card03,
+  .portfolio-card01,
+  .portfolio-card02,
+  .portfolio-card05 {
+    height: 240px;
+  }
+
+  .portfolio-header01-spacing {
+    margin-bottom: 78px !important;
+  }
+
+  .box02-Rspacing {
+    padding-right: 0px !important;
+  }
+
+  .box02-Lspacing {
+    padding-left: 0px !important;
+  }
+
+  .footer-spacing {
+    padding-top: 72px !important;
+  }
+
+}
+
 @media (max-width: 430px) {
   .smile-img {
     width: 20px;
@@ -2241,7 +2303,7 @@ h1.slide-title {
   }
 
   .passion-content {
-    padding-bottom: 44px;
+    padding-bottom: 36px;
   }
 
   .project-intro h1 {

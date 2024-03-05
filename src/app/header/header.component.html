@@ -1,5 +1,5 @@
 <!-- Desktop view -->
-<div *ngIf="!isMobileView" class="d-flex justify-content-center align-items-center"
+<div id="header" *ngIf="!isMobileView" class="d-flex justify-content-center align-items-center"
     [ngClass]="isBlackBg == true ? 'darkBg' : 'whiteBg'">
     <img *ngIf="!isBlackBg" class="logo-icon cursor-pointer" src="assets/images/Mylogo.svg" alt="Me"
         (click)="navigateToHome()">
@@ -26,7 +26,7 @@
     </div>
 </div>
 <!-- Mobile View -->
-<div *ngIf="isMobileView" class="d-flex justify-content-between">
+<div id="header" *ngIf="isMobileView" class="d-flex justify-content-between">
     <img [ngClass]="isBlackBg == true ? 'whiteIcon' : 'darkIcon'" src="assets/images/More.svg" alt="Me"
         (click)="fnCollapseClick()">
     <div class="sticky-wrapper">

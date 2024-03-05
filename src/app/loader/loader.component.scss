@@ -213,7 +213,7 @@ ul {
 
 @media (max-width: 1200px) {
     .title {
-        font-size: 144px;
+        font-size: 128px;
     }
 }
 
@@ -229,6 +229,12 @@ ul {
 
     .loader-space {
         padding-top: 32px;
+    }
+}
+
+@media (max-width: 858px) {
+    .title {
+        font-size: 92px;
     }
 }
 
@@ -327,6 +333,100 @@ ul {
 
         100% {
             margin-top: -1400px;
+
+        }
+    }
+}
+
+@media (max-width: 658px) {
+    .title {
+        font-size: 64px;
+        line-height: 198px;
+    }
+}
+
+@media (max-width: 550px) {
+    .title-container {
+        height: 174px;
+    }
+
+    .title {
+        font-size: 54px;
+        line-height: 172px;
+    }
+
+    @keyframes changeText {
+        0% {
+            margin-top: -1198px;
+        }
+
+        6.25% {
+            margin-top: -1028px;
+        }
+
+        12.5% {
+            margin-top: -1028px;
+        }
+
+        18.75% {
+            margin-top: -858px;
+        }
+
+        25% {
+            margin-top: -858px;
+        }
+
+        31.25% {
+            margin-top: -688px;
+        }
+
+        37.5% {
+            margin-top: -688px;
+        }
+
+        43.75% {
+            margin-top: -518px;
+        }
+
+        50% {
+            margin-top: -518px;
+        }
+
+        56.25% {
+            margin-top: -348px;
+        }
+
+        62.5% {
+            margin-top: -348px;
+        }
+
+        68.75% {
+            margin-top: -174px;
+        }
+
+        75% {
+            margin-top: -174px;
+        }
+
+        81.25% {
+            margin-top: -0px;
+        }
+
+        87.5% {
+            margin-top: -0px;
+        }
+
+        93.74999999% {
+            margin-top: -0px;
+        }
+
+        93.75% {
+            margin-top: -1198px;
+
+        }
+
+        100% {
+            margin-top: -1198px;
 
         }
     }

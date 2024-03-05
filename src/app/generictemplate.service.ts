@@ -11,6 +11,9 @@ export class GenerictemplateService {
   portfolioScoll = new Subject();
   portfolioScoll$ = this.portfolioScoll.asObservable();
 
+  scrollToTop = new Subject();
+  scrollToTop$ = this.scrollToTop.asObservable();
+
   commonGetJSON(url: string) {
     let baseUrl;
     if (url === 'carousel') {
