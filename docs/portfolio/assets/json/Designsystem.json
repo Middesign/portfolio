@@ -1,0 +1,21 @@
+{
+  "heading": "Design system",
+  "options": [
+    {
+      "id": 0,
+      "src": "assets/images/DS01.png"
+    },
+    {
+      "id": 1,
+      "src": "assets/images/DS02.png"
+    },
+    {
+      "id": 2,
+      "src": "assets/images/DS03.png"
+    },
+    {
+      "id": 3,
+      "src": "assets/images/DS04.png"
+    }
+  ]
+}
