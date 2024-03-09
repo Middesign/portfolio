@@ -8,7 +8,7 @@ import { RouteGuardService } from './route-guard.service';
 import { PasswordComponent } from './password/password.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'password', pathMatch: 'full' },
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
   {
     path: 'home',
     component: DashboardComponent,
