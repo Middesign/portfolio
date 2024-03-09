@@ -62,7 +62,7 @@
                         <img class="card-01" src="assets/images/card-01.png">
                         <h4 class="mini-text">Mobile Apps</h4>
                         <img class="item1-handle cursor-pointer" src="assets/images/clickable-icon.svg" alt="navi"
-                            (click)="navigateToUnderConstruction()">
+                            (click)="navigatetoDetails('agri')">
                     </div>
                 </div>
                 <div class="col-md-8 item2-space">
@@ -72,7 +72,7 @@
                         </div>
                         <img class="card-02" src="assets/images/card-02.png">
                         <img class="item2-handle cursor-pointer" src="assets/images/clickable-dashboard.svg" alt="navi"
-                            (click)="navigateToUnderConstruction()">
+                            (click)="navigatetoDetails('mentorship')">
                     </div>
                 </div>
             </div>
@@ -94,7 +94,7 @@
                                 <img class="card-04" src="assets/images/card-04.png">
                                 <h4 class="mini-text">Branding</h4>
                                 <img class="item4-handle cursor-pointer" src="assets/images/clickable-branding.svg"
-                                    alt="navi" (click)="navigateToUnderConstruction()">
+                                    alt="navi" (click)="navigatetoDetails('branding')">
                             </div>
                         </div>
                         <div class=" col-md-6 item4-space">
@@ -102,7 +102,7 @@
                                 <img class="card-05" src="assets/images/blender.png">
                                 <h4 class="mini-text">Illustrations</h4>
                                 <img class="item5-handle cursor-pointer" src="assets/images/clickable-Illustrations.svg"
-                                    alt="navi" (click)="navigateToUnderConstruction()">
+                                    alt="navi" (click)="navigatetoDetails('illustrations')">
                             </div>
                             <div class="small-card item6">
                                 <img class="card-06" src="assets/images/card-06.png">
@@ -145,7 +145,7 @@
         </div>
     </div>
     <div class="container">
-        <div class="row portfolio-box01">
+        <div class="row portfolio-box01" (click)="navigatetoDetails('mentorship')">
             <div class="col-md-6 col-12 portfolio-card01">
             </div>
             <div class="col-md-6 col-12 portfolio-content">
@@ -167,7 +167,7 @@
                 </div>
             </div>
         </div>
-        <div class="row portfolio-box01">
+        <div class="row portfolio-box01" (click)="navigatetoDetails('designsystem')">
             <div class="col-md-6 portfolio-card02">
             </div>
             <div class="col-md-6 portfolio-content">
@@ -191,7 +191,7 @@
         </div>
         <div class="row">
             <div class="col-md-6 box02-Rspacing">
-                <div class="row portfolio-box02">
+                <div class="row portfolio-box02" (click)="navigatetoDetails('agri')">
                     <img src="assets/images/card03.png" alt="Card Image" class="col-12 portfolio-card03">
                     <div class="col-12 portfolio-content">
                         <div class="portfolio-header portfolio-header-spacing">
@@ -214,7 +214,7 @@
                 </div>
             </div>
             <div class="col-md-6 box02-Lspacing">
-                <div class="row portfolio-box02">
+                <div class="row portfolio-box02" (click)="navigatetoDetails('construction')">
                     <img src="assets/images/card04.png" alt="Card Image" class="col-12 portfolio-card03">
                     <div class="col-12 portfolio-content">
                         <div class="portfolio-header portfolio-header-spacing">
@@ -237,7 +237,7 @@
                 </div>
             </div>
         </div>
-        <div class="row portfolio-box01">
+        <div class="row portfolio-box01" (click)="navigatetoDetails('branding')">
             <div class="col-md-6 portfolio-card05">
             </div>
             <div class="col-md-6 portfolio-content">
@@ -261,7 +261,7 @@
         </div>
         <div class="row">
             <div class="col-md-6 box02-Rspacing">
-                <div class="row portfolio-box02">
+                <div class="row portfolio-box02" (click)="navigatetoDetails('gear360')">
                     <img src="assets/images/card06.png" alt="Card Image" class="col-12 portfolio-card03">
                     <div class="col-12 portfolio-content">
                         <div class="portfolio-header portfolio-header-spacing">
@@ -284,7 +284,7 @@
                 </div>
             </div>
             <div class="col-md-6 box02-Lspacing">
-                <div class="row portfolio-box02">
+                <div class="row portfolio-box02" (click)="navigatetoDetails('illustrations')">
                     <img src="assets/images/card07.png" alt="Card Image" class="col-12 portfolio-card03">
                     <div class="col-12 portfolio-content">
                         <div class="portfolio-header portfolio-header-spacing">

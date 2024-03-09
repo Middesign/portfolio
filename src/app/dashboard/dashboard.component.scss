@@ -177,14 +177,6 @@ sub.year {
   padding-bottom: 112px !important;
 }
 
-.passion-header {
-  font-size: 56px;
-  line-height: 64px;
-  font-weight: 700;
-  font-family: variables.$font-primary;
-  padding-right: 100px;
-}
-
 .passion-content {
   padding-bottom: 48px;
 }
@@ -207,6 +199,14 @@ sub.year {
   line-height: 28px;
   font-weight: 400;
   color: #000;
+}
+
+.passion-header {
+  font-family: variables.$font-seventh;
+  font-size: 56px;
+  line-height: 72px;
+  font-weight: 500;
+  padding: 8px 112px 0px 0px;
 }
 
 .project-intro-spacing {
@@ -654,6 +654,7 @@ h1.slide-title {
   margin-bottom: 40px !important;
   height: 400px;
   display: flex;
+  cursor: pointer;
   // overflow: hidden;
 }
 
@@ -662,6 +663,7 @@ h1.slide-title {
   margin-bottom: 40px !important;
   // height: 400px;
   display: flex;
+  cursor: pointer;
   // overflow: hidden;
 }
 
@@ -796,8 +798,7 @@ h1.slide-title {
     font-size: 56px;
     line-height: 72px;
     font-weight: 500;
-    padding-right: 112px;
-    padding-bottom: 0px;
+    padding: 8px 112px 0px 0px;
   }
 
   .project-intro-spacing {

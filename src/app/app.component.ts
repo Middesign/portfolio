@@ -20,7 +20,7 @@ export class AppComponent implements OnInit {
         clearInterval(interval);
         this.showLoader = false;
       }
-    }, 580);
+    }, 5);
   }
   // 580
   title = 'portfolio';

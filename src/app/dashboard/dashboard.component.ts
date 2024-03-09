@@ -205,4 +205,26 @@ export class DashboardComponent implements OnInit {
     // this.scroller.scrollToAnchor('header');
     this.genericService.scrollToTop.next(true);
   }
+  navigatetoDetails(queryParams: string) {
+    let type = localStorage.getItem('queryParams');
+    if (type) {
+      localStorage.removeItem('queryParams');
+    }
+    if (queryParams !== 'construction') {
+      localStorage.setItem('queryParams', queryParams);
+      if (
+        queryParams == 'mentorship' ||
+        queryParams == 'designsystem' ||
+        queryParams == 'agri'
+      ) {
+        localStorage.setItem('currentPath', '/details');
+        this.router.navigate(['/details']);
+      } else {
+        localStorage.setItem('currentPath', '/details-page');
+        this.router.navigate(['/details-page']);
+      }
+    } else {
+      this.navigateToUnderConstruction();
+    }
+  }
 }

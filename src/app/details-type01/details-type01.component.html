@@ -1,0 +1,23 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12 back cursor-pointer">
+            <img src="assets/images/backicon2.svg" class="" (click)="navigateToHome()">
+            <span (click)="navigateToHome()">Back</span>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12" *ngIf="details !== undefined && details !== null && details !== ''">
+            <ng-container *ngFor="let item of details.options">
+                <img class="img-01" [src]="item.src" alt="" appDisableRightClick oncontextmenu="return false;">
+            </ng-container>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xl-6 col-md-8 col-10 footer-links m-auto">
+            <h2>Thank you for exploring my work</h2>
+            <p (click)="navigateToHome()">See more works#</p>
+        </div>
+    </div>
+</div>
+
+<div *ngIf="showLoader" class="loading">Loading&#8230;</div>
