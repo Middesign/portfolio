@@ -137,7 +137,9 @@ export class DashboardComponent implements OnInit {
       }
     });
   }
-
+  scrollToPortfolioRef() {
+    this.scroller.scrollToAnchor('portfolio');
+  }
   gerCarouselDetails() {
     this.genericService.commonGetJSON('carousel').subscribe((data) => {
       if (data != undefined && data != null) {

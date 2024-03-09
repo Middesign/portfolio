@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { GenerictemplateService } from '../generictemplate.service';
+import { DashboardComponent } from '../dashboard/dashboard.component';
 
 @Component({
   selector: 'app-details-type01',
@@ -24,6 +25,7 @@ export class DetailsType01Component implements OnInit {
   type: string | undefined;
   details: any;
   showLoader = true;
+  dashboardComponent = DashboardComponent;
 
   ngOnInit(): void {
     this.type = localStorage.getItem('queryParams') ?? 'mentorship';
@@ -42,5 +44,6 @@ export class DetailsType01Component implements OnInit {
   }
   navigateToHome() {
     this.router.navigate(['/home']);
+    this.genericService.portfolioScoll.next(true);
   }
 }
