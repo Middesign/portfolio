@@ -64,13 +64,6 @@ export class AboutComponent implements OnInit {
     window.location.href = 'mailto:midhunvijayan078@gmail.com';
   }
   scrollToTop() {
-    (function smoothscroll() {
-      var currentScroll =
-        document.documentElement.scrollTop || document.body.scrollTop;
-      if (currentScroll > 0) {
-        window.requestAnimationFrame(smoothscroll);
-        window.scrollTo(0, currentScroll - currentScroll / 24);
-      }
-    })();
+    this.genericService.scrollToTop.next(true);
   }
 }
