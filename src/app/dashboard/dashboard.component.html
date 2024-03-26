@@ -58,7 +58,7 @@
             </div> -->
             <div class="row project-section">
                 <div class="item1-space col-md-4">
-                    <div class="work-card item1">
+                    <div class="work-card item1" (click)="navigatetoDetails('agri')">
                         <img class="card-01" src="assets/images/card-01.png">
                         <h4 class="mini-text">Mobile Apps</h4>
                         <img class="item1-handle cursor-pointer" src="assets/images/clickable-icon.svg" alt="navi"
@@ -66,7 +66,7 @@
                     </div>
                 </div>
                 <div class="col-md-8 item2-space">
-                    <div class="work-card item2">
+                    <div class="work-card item2" (click)="navigatetoDetails('mentorship')">
                         <div class="card-text">
                             <h4 class="mini-text">Dashboards and <br />Webapps</h4>
                         </div>
@@ -78,7 +78,7 @@
             </div>
             <div class="row name-role-spacing">
                 <div class="item3-space col-md-6">
-                    <div class="work-card item3">
+                    <div class="work-card item3" (click)="navigateToUnderConstruction()">
                         <div class="card-text">
                             <h4 class="mini-text">Landing pages</h4>
                         </div>
@@ -90,7 +90,7 @@
                 <div class="col-md-6">
                     <div class="row">
                         <div class="item3-space item4-space col-md-6">
-                            <div class="work-card item4">
+                            <div class="work-card item4" (click)="navigatetoDetails('branding')">
                                 <img class="card-04" src="assets/images/card-04.png">
                                 <h4 class="mini-text">Branding</h4>
                                 <img class="item4-handle cursor-pointer" src="assets/images/clickable-branding.svg"
@@ -98,19 +98,48 @@
                             </div>
                         </div>
                         <div class=" col-md-6 item4-space">
-                            <div class="small-card item5">
+                            <div class="small-card item5" (click)="navigatetoDetails('illustrations')">
                                 <img class="card-05" src="assets/images/blender.png">
                                 <h4 class="mini-text">Illustrations</h4>
                                 <img class="item5-handle cursor-pointer" src="assets/images/clickable-Illustrations.svg"
                                     alt="navi" (click)="navigatetoDetails('illustrations')">
                             </div>
-                            <div class="small-card item6">
+                            <div class="small-card item6" (click)="navigateToUnderConstruction()">
                                 <img class="card-06" src="assets/images/card-06.png">
                                 <h4 class="mini-text">Icons</h4>
                                 <img class="item6-handle cursor-pointer" src="assets/images/clickable-icons.svg"
                                     alt="navi" (click)="navigateToUnderConstruction()">
                             </div>
                         </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="video-player-wrapper video-spacing">
+                        <vg-player>
+                            <vg-overlay-play></vg-overlay-play>
+                            <vg-buffering></vg-buffering>
+                            <vg-scrub-bar>
+                                <vg-scrub-bar-current-time></vg-scrub-bar-current-time>
+                                <vg-scrub-bar-buffering-time></vg-scrub-bar-buffering-time>
+                            </vg-scrub-bar>
+                            <vg-controls>
+                                <vg-play-pause></vg-play-pause>
+                                <vg-playback-button></vg-playback-button>
+                                <vg-time-display vgProperty="current" vgFormat="mm:ss"></vg-time-display>
+                                <vg-scrub-bar style="pointer-events: none;"></vg-scrub-bar>
+                                <vg-time-display vgProperty="left" vgFormat="mm:ss"></vg-time-display>
+                                <vg-time-display vgProperty="total" vgFormat="mm:ss"></vg-time-display>
+                                <vg-mute></vg-mute>
+                                <vg-volume></vg-volume>
+                                <vg-fullscreen></vg-fullscreen>
+                            </vg-controls>
+                            <video [vgMedia]="$any(media)" #media id="singleVideo" preload="auto"
+                                poster="assets/images/Videothumbnail.png" crossorigin>
+                                <source src="assets/files/Midhun_Showreel_2024.mp4" type="video/mp4">
+                            </video>
+                        </vg-player>
                     </div>
                 </div>
             </div>

@@ -7,8 +7,6 @@ import {
 } from '@angular/core';
 import { OwlOptions } from 'ngx-owl-carousel-o';
 import { GenerictemplateService } from '../generictemplate.service';
-import { style, transition, trigger, animate } from '@angular/animations';
-import { SwiperOptions } from 'swiper/types/swiper-options';
 import { Router } from '@angular/router';
 import { ViewportScroller } from '@angular/common';
 
@@ -75,27 +73,27 @@ export class DashboardComponent implements OnInit {
     nav: true,
   };
 
-  config: SwiperOptions = {
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
-    },
-    // navigation: {
-    //   nextEl: '.swiper-button-next',
-    //   prevEl: '.swiper-button-prev',
-    // },
-    spaceBetween: 50,
-    slidesPerView: 'auto',
-    centeredSlides: true,
-    effect: 'coverflow',
-    coverflowEffect: {
-      rotate: 50,
-      slideShadows: true,
-      stretch: 0,
-      depth: 100,
-      modifier: 1,
-    },
-  };
+  // config: SwiperOptions = {
+  //   pagination: {
+  //     el: '.swiper-pagination',
+  //     clickable: true,
+  //   },
+  //   // navigation: {
+  //   //   nextEl: '.swiper-button-next',
+  //   //   prevEl: '.swiper-button-prev',
+  //   // },
+  //   spaceBetween: 50,
+  //   slidesPerView: 'auto',
+  //   centeredSlides: true,
+  //   effect: 'coverflow',
+  //   coverflowEffect: {
+  //     rotate: 50,
+  //     slideShadows: true,
+  //     stretch: 0,
+  //     depth: 100,
+  //     modifier: 1,
+  //   },
+  // };
   hideProfile = false;
   isMobileView = false;
   slidesStore: any;

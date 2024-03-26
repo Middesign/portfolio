@@ -33,6 +33,7 @@ export class FooterComponent implements OnInit {
   @Output() scrolltotop = new EventEmitter<string>();
   hideBacktoTop = false;
   imageSource = 'assets/images/Write-msg-01.svg';
+  mailid = 'midhunvijayan078@gmail.com';
 
   @HostListener('window:resize', ['$event'])
   checkScreenSize() {
