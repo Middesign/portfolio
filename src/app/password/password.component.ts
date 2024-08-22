@@ -39,7 +39,8 @@ export class PasswordComponent implements OnInit {
       ) {
         this.showError = false;
         localStorage.setItem('password', password);
-        const currentPath = localStorage.getItem('currentPath') ?? '/details';
+        // const currentPath = localStorage.getItem('currentPath') ?? '/details';
+        const currentPath = localStorage.getItem('currentPath') ?? '/home';
         this.router.navigate([currentPath]);
       } else {
         this.showError = true;
