@@ -13,7 +13,8 @@ export class GenerictemplateService {
 
   scrollToTop = new Subject();
   scrollToTop$ = this.scrollToTop.asObservable();
-  secretePassword = '4202'; /* do not change*/
+  // secretePassword = '4202'; /* do not change*/
+  secretePassword = '7124';
 
   commonGetJSON(url: string) {
     let baseUrl;
@@ -46,7 +47,7 @@ export class GenerictemplateService {
   }
   public isAuthenticated(): boolean {
     const password = localStorage.getItem('password');
-    if (password === this.secretePassword || password === '2255') {
+    if (password === this.secretePassword || password === '8245') {
       return true;
     } else {
       return false;

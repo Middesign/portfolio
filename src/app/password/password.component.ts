@@ -17,6 +17,8 @@ export class PasswordComponent implements OnInit {
   password: string | undefined;
   showPassword: boolean = false;
   inputType: string = 'password';
+  // password === '2255'
+  secretePswd = '8245';
 
   ngOnInit(): void {}
 
@@ -32,8 +34,8 @@ export class PasswordComponent implements OnInit {
     const password = form.value.password;
     if (form.valid) {
       if (
-        password === this.genericService.secretePassword ||
-        password === '2255'
+        password === this.secretePswd ||
+        password === this.genericService.secretePassword
       ) {
         this.showError = false;
         localStorage.setItem('password', password);

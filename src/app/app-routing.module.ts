@@ -12,6 +12,7 @@ const routes: Routes = [
   {
     path: 'home',
     component: DashboardComponent,
+    canActivate: [RouteGuardService],
   },
   {
     path: 'processing',
