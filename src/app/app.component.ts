@@ -14,7 +14,8 @@ export class AppComponent implements OnInit {
     let incrementNo = 100 / yearDiff;
     const interval = setInterval(() => {
       if (this.progress < 100) {
-        this.progress += incrementNo;
+        this.progressValue += incrementNo;
+        this.progress = Math.min(Math.floor(this.progressValue), 100);
         this.yearProgress++;
       } else {
         clearInterval(interval);
@@ -28,6 +29,7 @@ export class AppComponent implements OnInit {
   isProcessing = false;
   showLoader = true;
   progress: number = 0;
+  progressValue: number = 0;
   yearProgress: number = 2014;
 
   ngOnInit(): void {
