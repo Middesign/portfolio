@@ -18,10 +18,10 @@ export class RouteGuardService implements CanActivate {
     private router: Router
   ) {}
   canActivate(): boolean {
-    if (!this.generictemplateHttp.isAuthenticated()) {
-      this.router.navigate(['/password']);
-      return false;
-    }
+    // if (!this.generictemplateHttp.isAuthenticated()) {
+    //   this.router.navigate(['/password']);
+    //   return false;
+    // }
     localStorage.removeItem('currentPath');
     return true;
   }

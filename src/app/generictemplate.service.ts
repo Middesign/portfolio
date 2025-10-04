@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Subject } from 'rxjs';
+import { environment } from 'src/environments/environment.prod';
 
 @Injectable({
   providedIn: 'root',
@@ -14,7 +15,7 @@ export class GenerictemplateService {
   scrollToTop = new Subject();
   scrollToTop$ = this.scrollToTop.asObservable();
   // secretePassword = '4202'; /* do not change*/
-  secretePassword = '7124';
+  secretePassword = '4488';
 
   commonGetJSON(url: string) {
     let baseUrl;
@@ -47,7 +48,7 @@ export class GenerictemplateService {
   }
   public isAuthenticated(): boolean {
     const password = localStorage.getItem('password');
-    if (password === this.secretePassword || password === '8245') {
+    if (password === this.secretePassword || password === environment.secretePswd) {
       return true;
     } else {
       return false;

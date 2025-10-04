@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { GenerictemplateService } from '../generictemplate.service';
 import { Router } from '@angular/router';
+import { environment } from 'src/environments/environment.prod';
 
 @Component({
   selector: 'app-password',
@@ -18,7 +19,7 @@ export class PasswordComponent implements OnInit {
   showPassword: boolean = false;
   inputType: string = 'password';
   // password === '2255'
-  secretePswd = '8245';
+  // secretePswd = '2255';
 
   ngOnInit(): void {}
 
@@ -34,7 +35,7 @@ export class PasswordComponent implements OnInit {
     const password = form.value.password;
     if (form.valid) {
       if (
-        password === this.secretePswd ||
+        password === environment.secretePswd||
         password === this.genericService.secretePassword
       ) {
         this.showError = false;
