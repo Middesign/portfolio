@@ -1,0 +1,21 @@
+{
+  "heading": "Mentorship",
+  "options": [
+    {
+      "id": 0,
+      "src": "assets/images/mentorship01.png"
+    },
+    {
+      "id": 1,
+      "src": "assets/images/mentorship02.png"
+    },
+    {
+      "id": 2,
+      "src": "assets/images/mentorship03.png"
+    },
+    {
+      "id": 3,
+      "src": "assets/images/mentorship04.png"
+    }
+  ]
+}
