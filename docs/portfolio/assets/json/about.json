@@ -1,0 +1,17 @@
+[
+  {
+    "id": 0,
+    "title": "About",
+    "desc": "I am a seasoned UI/UX designer with over a decade of experience in crafting exceptional digital experiences. Throughout my career, I've successfully delivered results across a diverse range of projects, totaling more than 30 successful ventures."
+  },
+  {
+    "id": 1,
+    "title": "Expertise",
+    "desc": "My skills span a broad spectrum, including UI and UX design, micro-interactions, illustration, iconography, branding, visual design, and a foundational understanding of HTML and CSS."
+  },
+  {
+    "id": 2,
+    "title": "Project Diversity",
+    "desc": "I have contributed my design expertise to a variety of platforms, including mobile apps, dashboards, and websites. Each project reflects my commitment to marrying functionality with aesthetics, resulting in intuitive and visually engaging user experiences."
+  }
+]

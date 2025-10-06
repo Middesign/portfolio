@@ -1,0 +1,54 @@
+[
+  {
+    "id": 0,
+    "title": "UI,UX Design"
+  },
+  {
+    "id": 1,
+    "title": "Wireframing"
+  },
+  {
+    "id": 2,
+    "title": "Prototyping"
+  },
+  {
+    "id": 3,
+    "title": "Design System"
+  },
+  {
+    "id": 4,
+    "title": "Animation"
+  },
+  {
+    "id": 5,
+    "title": "Icons Design"
+  },
+  {
+    "id": 6,
+    "title": "Illustration Design"
+  },
+  {
+    "id": 7,
+    "title": "Branding"
+  },
+  {
+    "id": 8,
+    "title": "Visual Design"
+  },
+  {
+    "id": 9,
+    "title": "3D Modeling"
+  },
+  {
+    "id": 10,
+    "title": "Video Editing"
+  },
+  {
+    "id": 11,
+    "title": "Motion Graphics"
+  },
+  {
+    "id": 12,
+    "title": "HTML, CSS (Basics)"
+  }
+]
