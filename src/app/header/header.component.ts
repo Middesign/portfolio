@@ -78,7 +78,7 @@ export class HeaderComponent implements OnInit {
   }
   downloadResume() {
     if (this.linkText.toLowerCase() === 'download') {
-      const resumeurl = 'assets/files/Midhun Vijayan_Resume 2024.pdf';
+      const resumeurl = 'assets/files/Midhun Vijayan-Resume-2025.pdf';
       const link = document.createElement('a');
 
       link.setAttribute('target', '_blank');
